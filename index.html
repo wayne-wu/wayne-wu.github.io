@@ -50,12 +50,13 @@ a {
   <h3 class="w3-padding-64 w3-center"><b>WAYNE<br>WU</b></h3>
   <!-- <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a> -->
   <!-- <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>  -->
-  <a href="#about" class="w3-bar-item w3-button">ABOUT ME</a> 
-  <a href="https://www.linkedin.com/in/wayne-wu" class="w3-bar-item w3-button">EXPERIENCES</a>
-  <a href="https://www.github.com/wayne-wu" class="w3-bar-item w3-button">PROJECTS</a>
-  <a href="https://waynewusportfolio.wordpress.com" class="w3-bar-item w3-button">SHORT FILMS</a>
-  <a href="https://www.instagram.com/danceformewayne/" class="w3-bar-item w3-button">GALLERY</a>
-  <a href="#links" class="w3-bar-item w3-button">LINKS</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+  <a href="https://www.linkedin.com/in/wayne-wu" onclick="w3_close()" class="w3-bar-item w3-button">EXPERIENCES</a>
+  <a href="https://www.github.com/wayne-wu" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+  <a href="https://waynewusportfolio.wordpress.com" onclick="w3_close()" class="w3-bar-item w3-button">SHORT FILMS</a>
+  <a href="https://www.instagram.com/danceformewayne/" onclick="w3_close()" class="w3-bar-item w3-button">GALLERY</a>
+  <a href="files/resume-waynewu.pdf" onclick="w3_close()" class="w3-bar-item w3-button" target="_blank">RESUME</a>
+  <a href="#links" onclick="w3_close()" class="w3-bar-item w3-button">LINKS</a>
   <!-- <a href="#contact" class="w3-bar-item w3-button">CONTACT</a> -->
 </nav>
 
@@ -70,7 +71,7 @@ a {
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
-  
+
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
@@ -81,7 +82,7 @@ a {
   </div>
 
   <img src="images/cover_photo.jpg" class="w3-image" style="width:100%">
-  
+
   <!-- About section -->
   <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
     <h4><b>About Me</b></h4>
@@ -91,21 +92,24 @@ a {
     <div class="w3-content w3-justify" style="max-width:600px">
       <p>Art, Technology, and Alcohol. Those are the three things that define me as a person. <br/>
       <br/>
-      Every art tells a story that connects to our feelings. Therefore, a world without art is essentialy a world without a heart. 
+      Every art tells a story that connects to our feelings. Therefore, a world without art is essentialy a world without a heart.
       It is exactly the stories that I've come across growing up that have solidified my values, and the dream to create my own stories that can inspire someone else. <br/>
       <br/>
       The forms of art are constantly evolving thanks to technology that continues to follow Moore's Law.
-      Technology powers art by delivering the stories through our human senses. As such, there is no better place for me than in engineering 
-      to learn the science and theories behind these innovations, and ultimately create products that elevate further our ability to preceive arts.
+      Technology powers art by delivering the stories through our human senses. As such, I aspire to learn the science and theories behind these innovations in engineering, and ultimately create products that elevate further our ability to preceive arts.
       <br/>
       <br/>
-      Finally, alcohol connects people, the creators of art and technology. A glass of wine holds two hands together. A pint of beer echoes the laughters of friends. 
+      Finally, alcohol connects people, the creators of art and technology. A glass of wine joins two hands together. A pint of beer echoes the laughters of friends.
       That's why I choose to be a bartender when I'm not learning about art or technology, to connect with people and to connect people together. <br/>
       <br/>
       <img src="images/signature_white.png" width=250px height=100px/>
       <p> Wayne Wu </p>
     </div>
   </div>
+
+  <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="experiences">
+    <h4><b>Experiences</b></h4>
+
 
   <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="links">
     <h4><b>Links</b></h4>
@@ -124,10 +128,10 @@ a {
         </a>
         <a href="https://waynewusportfolio.wordpress.com">
           <img src="images/wordpress.png" alt="Wordpress">
-        </a>    
+        </a>
     </div>
   </div>
-      
+
   <!-- Contact section -->
   <!-- <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact"> -->
     <!-- <div class="w3-content" style="max-width:600px"> -->
@@ -152,7 +156,7 @@ a {
   <!-- </div> -->
 
   <div class="w3-black w3-center w3-padding-24">
-    <a href="#">Back to the Top</a> 
+    <a href="#">Back to the Top</a>
   </div>
 
 <!-- End page content -->
@@ -164,7 +168,7 @@ function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
 }
- 
+
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";

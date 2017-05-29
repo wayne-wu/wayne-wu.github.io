@@ -5,88 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-<!-- .w3-third img{opacity: 0.8; cursor: pointer;} -->
-<!-- .w3-third img:hover{opacity: 1} -->
-.circular--landscape {
-  display: inline-block;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.circular--landscape img {
-  width: auto;
-  height: 100%;
-  margin-left: -40px;
-}
-.links-logo {
-  display: inline-block;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.links-logo img {
-  width: 80px;
-  height: 80px;
-  margin-right: 25px;
-  margin-left: 25px;
-  opacity: 0.8;
-}
-.links-logo img:hover{opacity: 1}
+<link rel="stylesheet" href="css/custom-layout.css">
 
-.experience-row {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.experience-image {
-    width: 100%; 
-    height: 100px;
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-}
-
-.experience-image img{
-    display: inline-block;
-    position: absolute;
-    top: 0;  
-    bottom: 0;  
-    left: 0;  
-    right: 0; 
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    vertical-align: middle;
-}
-
-.experience {float:left;width:100%}
-
-a {
-    text-decoration: none;
-}
-
-
-</style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>WAYNE<br>WU</b></h3>
-  <!-- <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a> -->
-  <!-- <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>  -->
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
   <a href="https://www.linkedin.com/in/wayne-wu" onclick="w3_close()" class="w3-bar-item w3-button">EXPERIENCES</a>
   <a href="https://www.github.com/wayne-wu" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
-  <a href="https://waynewusportfolio.wordpress.com" onclick="w3_close()" class="w3-bar-item w3-button">SHORT FILMS</a>
-  <a href="https://www.instagram.com/danceformewayne/" onclick="w3_close()" class="w3-bar-item w3-button">GALLERY</a>
   <a href="files/resume-waynewu.pdf" onclick="w3_close()" class="w3-bar-item w3-button" target="_blank">RESUME</a>
+  <a href="https://waynewusportfolio.wordpress.com" onclick="w3_close()" class="w3-bar-item w3-button">SHORT FILMS</a>
+  <a href="https://www.instagram.com/danceformewayne/" onclick="w3_close()" class="w3-bar-item w3-button">PHOTO GALLERY</a>
   <a href="#links" onclick="w3_close()" class="w3-bar-item w3-button">LINKS</a>
-  <!-- <a href="#contact" class="w3-bar-item w3-button">CONTACT</a> -->
 </nav>
 
 <!-- Top menu on small screens -->
@@ -113,12 +45,12 @@ a {
   <img src="images/cover_photo.jpg" class="w3-image" style="width:100%">
 
   <!-- About section -->
-  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+  <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="about">
     <h3><b>About Me</b></h3>
     <div class="circular--landscape">
       <img src="images/profile_pic.jpg" />
     </div>
-    <div class="w3-content w3-justify" style="max-width:600px">
+    <div class="w3-content w3-justify" style="max-width:800px">
       <p>Art, Technology, and Alcohol. Those are the three things that define me as a person. <br/>
       <br/>
       Every art tells a story that connects to our feelings. Therefore, a world without art is essentialy a world without a heart.
@@ -131,12 +63,11 @@ a {
       Finally, alcohol connects people, the creators of art and technology. A glass of wine joins two hands together. A pint of beer echoes the laughters of friends.
       That's why I choose to be a bartender when I'm not learning about art or technology, to connect with people and to connect people together. <br/>
       <br/>
-      <img src="images/signature_white.png" width=250px height=100px/>
+      <img src="images/signature.png" width=250px height=100px/>
       <p> Wayne Wu </p>
     </div>
   </div>
-
-  <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="experiences">
+  <div class="w3-container color1 w3-center w3-text-black w3-padding-32" id="experiences">
     <h3><b>Experiences</b></h3>
     <div class = "w3-row w3-padding-32 experience-row">
         <div class="w3-third">
@@ -177,53 +108,46 @@ a {
             <p>Advanced Micro Devices<br/>Jan 2015 - May 2015</P>
         </div>
     </div>
-    <!-- <div class="row row-space-1 margin-b-2"> -->
-        <!-- <div class="col-sm-4 sm-margin-b-2"> -->
-            <!-- <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s"> -->
-                <!-- <div class="service" data-height="height"> -->
-                    <!-- <div class="service-element"> -->
-                        <!-- <i class="service-icon icon-chemistry"></i> -->
-                    <!-- </div> -->
-                    <!-- <div class="service-info"> -->
-                        <!-- <h3>Art Of Coding</h3> -->
-                        <!-- <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p> -->
-                    <!-- </div> -->
-                    <!-- <a href="#" class="content-wrapper-link"></a>     -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
-        <!-- <div class="col-sm-4 sm-margin-b-2"> -->
-            <!-- <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s"> -->
-                <!-- <div class="service" data-height="height"> -->
-                    <!-- <div class="service-element"> -->
-                        <!-- <i class="service-icon icon-screen-tablet"></i> -->
-                    <!-- </div> -->
-                    <!-- <div class="service-info"> -->
-                        <!-- <h3>Responsive Design</h3> -->
-                        <!-- <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p> -->
-                    <!-- </div> -->
-                    <!-- <a href="#" class="content-wrapper-link"></a>     -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
-        <!-- <div class="col-sm-4"> -->
-            <!-- <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s"> -->
-                <!-- <div class="service" data-height="height"> -->
-                    <!-- <div class="service-element"> -->
-                        <!-- <i class="service-icon icon-badge"></i> -->
-                    <!-- </div> -->
-                    <!-- <div class="service-info"> -->
-                        <!-- <h3>Feature Reach</h3> -->
-                        <!-- <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p> -->
-                    <!-- </div> -->
-                    <!-- <a href="#" class="content-wrapper-link"></a>     -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
   </div>
 
-  <div class="w3-container w3-light-grey w3-center w3-text-black w3-padding-32" id="links">
+<!--   <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="skills">
+    <h3><b>Skills</b></h3>
+    <div class="w3-content w3-display-container" style="max-width:800px">
+        <div class="w3-display-container slides" style="width:100%">
+            <h4><b>Software</b></h4>
+            <div class = "w3-row w3-padding-32 experience-row">
+                <div class = "w3-quarter">
+                    <div class="experience-image">
+                        <img src="images/c++.png" alt="C++">
+                    </div>
+                </div>
+                <div class = "w3-quarter">
+                    <div class="experience-image">
+                        <img src="images/java.png" alt="Java">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-display-container slides" style="width:100%">
+            <h4><b>Graphics</b></h4>
+        </div>
+
+        <div class="w3-display-container slides" style="width:100%">
+            <h4><b>Learning</b></h4>
+        </div>
+
+        <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle" style="width:100%;">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
+        </div>
+    </div>
+  </div> -->
+  
+  <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="links">
     <h3><b>Links</b></h3>
     <div class="links-logo" style="width:100%">
         <a href="https://www.linkedin.com/in/wayne-wu">
@@ -244,29 +168,6 @@ a {
     </div>
   </div>
 
-  <!-- Contact section -->
-  <!-- <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact"> -->
-    <!-- <div class="w3-content" style="max-width:600px"> -->
-      <!-- <h4 class="w3-center"><b>Contact Me</b></h4> -->
-      <!-- <p>Let's talk about arts and technologies, while having a drink together.</p> -->
-      <!-- <form action="sendemail.php" method="post"> -->
-        <!-- <div class="w3-section"> -->
-          <!-- <label for="name">Name</label> -->
-          <!-- <input class="w3-input w3-border" type="text" name="Name" required> -->
-        <!-- </div> -->
-        <!-- <div class="w3-section"> -->
-          <!-- <label for="email">Email</label> -->
-          <!-- <input class="w3-input w3-border" type="text" name="Email" required> -->
-        <!-- </div> -->
-        <!-- <div class="w3-section"> -->
-          <!-- <label for="message">Message</label> -->
-          <!-- <input class="w3-input w3-border" type="text" name="Message" required> -->
-        <!-- </div> -->
-        <!-- <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button> -->
-      <!-- </form> -->
-    <!-- </div> -->
-  <!-- </div> -->
-
   <div class="w3-black w3-center w3-padding-24">
     <a href="#">Back to the Top</a>
   </div>
@@ -274,28 +175,7 @@ a {
 <!-- End page content -->
 </div>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-</script>
-
+<script src="js/custom-script.js"></script>
 
 </body>
 </html>

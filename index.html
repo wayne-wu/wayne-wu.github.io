@@ -9,8 +9,8 @@
 <body class="w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <h3 class="w3-padding-64 w3-center">WAYNE<br>WU</h3>
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-left w3-text-white w3-collapse w3-top w3-center" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center text-theme">WAYNE<br>WU</h3>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
   <a href="https://www.linkedin.com/in/wayne-wu" onclick="w3_close()" class="w3-bar-item w3-button">EXPERIENCES</a>
   <a href="https://www.github.com/wayne-wu" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
@@ -42,12 +42,12 @@
   </div>
 
   <!-- About section -->
-  <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="about">
-    <h3>About Me</h3>
-    <div class="circular--landscape">
+  <div class="w3-container maincolor w3-center text-white w3-padding-32" id="about">
+    <h3><b>About Me</b></h3>
+    <!-- <div class="circular--landscape">
       <img src="images/profile_pic2.jpg" />
-    </div>
-    <div class="w3-content w3-justify" style="max-width:800px">
+    </div> -->
+    <div class="content w3-justify" style="max-width:800px">
       <br/>
       Every art tells a story that connects to our feelings. Therefore, a world without art is essentialy a world without a heart.
       It is exactly the stories that I've come across growing up that have solidified my values, and the dream to create my own stories that can one day inspire someone else. <br/>
@@ -55,99 +55,86 @@
       The forms of art are constantly evolving thanks to the tech industry that continues to follow Moore's Law.
       Technology powers art by delivering the stories through our human senses. As such, I aspire to learn the science behind these innovations, and ultimately create technologies that elevate further our ability to preceive arts.
       <br/>
-      <img src="images/signature.png" width=250px height=100px/>
-      <p> Wayne Wu </p>
+      <!-- <img src="images/signature.png" width=250px height=100px/> -->
+      <p class="text-right"> Wayne Wu </p>
     </div>
   </div>
+
   <div class="w3-container w3-center w3-text-black w3-padding-32" id="experiences">
-    <h3>Experiences</h3>
-    <div class = "w3-row w3-padding-32 experience-row">
-        <div class="w3-third">
-            <div class="experience-image">
-                <img src="images/sidefx.png" alt="SIDEFX">
+    <h3><b>Experiences</b></h3>
+    <div class="content margin-top">
+        <div class = "w3-row experience-row">
+            <div class="w3-third">
+                <div class="experience-image">
+                    <img src="images/sidefx.png" alt="SIDEFX">
+                </div>
+                <h6>3D Software Developer</h6>
+                <p>SideFX Software <br/> Sep 2017 - Dec 2017</P>
             </div>
-            <h6>3D Software Developer</h6>
-            <p>SideFX Software <br/> Sep 2017 - Dec 2017</P>
+            <div class="w3-third">
+                <div class="experience-image">
+                    <img src="images/tangent-animation.png" alt="TA">
+                </div>
+                <h6>Technical Director</h6>
+                <p>Tangent Animation <br/> April 2017 - Sep 2017</P>
+            </div>
+            <div class="w3-third">
+                <div class="experience-image">        
+                    <img src="images/ea.png" alt="EA">
+                </div>
+                <h6>Associate Software Developer</h6>
+                <p>Electronic Arts <br/>Jan 2017 - April 2017</P>
+            </div>     
         </div>
-        <div class="w3-third">
-            <div class="experience-image">
-                <img src="images/tangent-animation.png" alt="TA">
+        <div class = "w3-row experience-row">
+            <div class="w3-third">
+                <div class="experience-image">
+                    <img src="images/yahoo.png" alt="Yahoo" style="height:35px" >
+                </div>
+                <h6>Software Engineering Intern</h6>
+                <p>Yahoo Inc.<br/>May 2016 - Aug 2016</P>
+            </div> 
+            <div class="w3-third">
+                <div class="experience-image">
+                    <img src="images/tangent-animation.png" alt="TA">
+                </div>
+                <h6>Jr. Technical Director</h6>
+                <p>Tangent Animation<br/>Sep 2015 - Dec 2015</P>
             </div>
-            <h6>Technical Director</h6>
-            <p>Tangent Animation <br/> April 2017 - Sep 2017</P>
-        </div>
-        <div class="w3-third">
-            <div class="experience-image">        
-                <img src="images/ea.png" alt="EA">
+            <div class="w3-third">
+                <div class="experience-image">        
+                    <img src="images/amd.png" alt="AMD">
+                </div>
+                <h6>Performance Analysis Engineer</h6>
+                <p>Advanced Micro Devices<br/>Jan 2015 - May 2015</P>
             </div>
-            <h6>Associate Software Developer</h6>
-            <p>Electronic Arts <br/>Jan 2017 - April 2017</P>
-        </div>     
-    </div>
-    <div class = "w3-row experience-row">
-        <div class="w3-third">
-            <div class="experience-image">
-                <img src="images/yahoo.png" alt="Yahoo" style="height:35px" >
-            </div>
-            <h6>Software Engineering Intern</h6>
-            <p>Yahoo Inc.<br/>May 2016 - Aug 2016</P>
-        </div> 
-        <div class="w3-third">
-            <div class="experience-image">
-                <img src="images/tangent-animation.png" alt="TA">
-            </div>
-            <h6>Jr. Technical Director</h6>
-            <p>Tangent Animation<br/>Sep 2015 - Dec 2015</P>
-        </div>
-        <div class="w3-third">
-            <div class="experience-image">        
-                <img src="images/amd.png" alt="AMD">
-            </div>
-            <h6>Performance Analysis Engineer</h6>
-            <p>Advanced Micro Devices<br/>Jan 2015 - May 2015</P>
         </div>
     </div>
   </div>
 
-<!--   <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="skills">
-    <h3><b>Skills</b></h3>
-    <div class="w3-content w3-display-container" style="max-width:800px">
-        <div class="w3-display-container slides" style="width:100%">
-            <h4><b>Software</b></h4>
-            <div class = "w3-row w3-padding-32 experience-row">
-                <div class = "w3-quarter">
-                    <div class="experience-image">
-                        <img src="images/c++.png" alt="C++">
-                    </div>
-                </div>
-                <div class = "w3-quarter">
-                    <div class="experience-image">
-                        <img src="images/java.png" alt="Java">
-                    </div>
-                </div>
+  <div class="w3-container black w3-center text-white w3-padding-32" id="projects">
+      <h3><b>Projects</b></h3>
+      <div class="content margin-top">
+        <div class="w3-row project-row">
+            <div class="w3-third">
+                <iframe src="https://player.vimeo.com/video/269223045" width="280" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><a href="https://vimeo.com/269223045">OpenGL 3D: Terrain &amp; L-system Trees</a></p>
+            </div>
+            <div class="w3-third">
+                <iframe class="black" src="https://player.vimeo.com/video/269215868" width="280" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><a href="https://vimeo.com/269215868">OpenGL 2D: Universe</a></p>
+            </div>
+            <div class="w3-third">
+                <iframe src="https://player.vimeo.com/video/263282138" width="280" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><a href="https://vimeo.com/263282138">OpenGL 2D: Doodle</a></p>
             </div>
         </div>
 
-        <div class="w3-display-container slides" style="width:100%">
-            <h4><b>Graphics</b></h4>
-        </div>
+      </div>
+  </div>
 
-        <div class="w3-display-container slides" style="width:100%">
-            <h4><b>Learning</b></h4>
-        </div>
-
-        <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle" style="width:100%;">
-            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        </div>
-    </div>
-  </div> -->
-  
   <div class="w3-container w3-white w3-center w3-text-black w3-padding-32" id="links">
-    <h3>Links</h3>
+    <h3><b>Links</b></h3>
     <div class="links-logo" style="width:100%">
         <a href="https://www.linkedin.com/in/wayne-wu">
           <img src="images/linkedin.png" alt="Linkedin">

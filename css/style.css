@@ -466,7 +466,10 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
 }
+
 .work .work-grid .inner {
   display: table;
   height: 300px;
@@ -478,6 +481,11 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.3s;
 }
 @media screen and (max-width: 768px) {
+  .work .work-grid {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+  
   .work .work-grid .inner {
     opacity: 1;
     background: rgba(237, 235, 232, 0.7);
@@ -514,6 +522,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .work:hover .desc h3 a, .work:focus .desc h3 a {
   color: #cabcab;
+}
+
+.work:hover .work-grid {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .top-line {

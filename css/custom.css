@@ -51,6 +51,12 @@ workvideo::-webkit-media-controls {
     display:none !important;
 }
 
+h3.normal { color: #000}
+span.red { color: #f985cb}
+span.yellow { color: #bdf9dc}
+span.blue { color: #34a5ea}
+
+
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {opacity: 0;} 

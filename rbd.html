@@ -58,29 +58,56 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Advanced Facial Auto-Rigging</h2>
-					<P align="justify">This is the project that I undertook during my first co-op at SideFX. 
-						This system is a FACS-based facial auto-rigging module integrated with Houdini's Autorigs.
-						The solution automates the facial rigging process using a low poly face cage. 
-						The use of low poly cage allows animation, blendshapes data to be easily transferred to other characters.
-						Special patches are also attached to the character's face based on the low poly cage, which allows controllers to
-						be moved in a confined space that best describes the movement of the muscles. 
+					<h2>Material-based Prefracturing for Rigid Body Destruction</h2>
+					<P align="justify">
+					Material-based prefracturing is a critical step to obtaining visually realistic destructions in visual effects. 
+					Houdini, prior to H17, already provides tools to handle rigid body destruction. 
+					However, due to a complicated workflow coupled with various technical difficulties in the software, the process to fracture geometries and set up a correct foundation for simulation can be challenging. 
+					For H17, a set of tools is provided to prefracture geometries based on three material types: concrete, glass, and wood.
+					In doing so, the general destruction workflow in the pre-simulation stage is redesigned to optimize in performance, art-directability and the overall efficiency of the system. 
+					The development of the material-based fracturing toolkit will serve as the basis for future adaptations around rigid body destruction in Houdini. 
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<p class="animate-box"><img src="images/facialrig/girlcage.png" class="img-responsive"></p>
-					<p class="animate-box"><img src="images/facialrig/malepatch.png" class="img-responsive"></p>
+					<img src="images/housefracture.jpg" class="img-responsive">
+					<img src="images/rbd/rbd_motivations.png" class="img-responsive workslide">
+					<img src="images/rbd/rbd_objectives.png" class="img-responsive workslide">
+					<!-- <div class="slide">
+						<div class="smallslide">
+								<h3>Motivations</h3>
+								<ul>
+									<li>Challenging to get the nice look.</li>
+									<li>Multi-material, Heterogeneous setup.</li>
+									<li>Complicated constraint network to manage.</li>
+									<li>Long iteration time.</li>
+									<li>Art-directable fracturing and destruction.</li>
+									<li>SimpleBulle.</li>
+								</ul>
+							</div>
+							<div class="smallslide">
+								<h3>Requirements</h3>
+								<ul>
+									<li>Aesthetic</li>
+									<li>Art Directability</li>
+									<li>Flexibility</li>
+									<li>Functionality</li>
+									<li>Performance</li>
+									<li>Extendability</li>
+								</ul>
+							</div>
+					</div> -->
+
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="clothsim.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Prev </a>
+							<a href="#" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="index.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="shallowwater.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+							<a href="clothsim.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
 						</div>
 					</div>
 				</div>

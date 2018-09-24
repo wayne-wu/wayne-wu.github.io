@@ -369,9 +369,9 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: auto;
   max-width: 100%;
-  height: auto;
+  max-height: 400px;
 }
 
 .img-rounded {

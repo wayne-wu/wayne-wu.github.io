@@ -58,26 +58,68 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Shallow Water</h2>
+					<h2>Sketchbook</h2>
 					<P align="justify">
-						This is a WebGL app that simulates the shallow water equation model.
-						The PDEs are solved using finite difference method.
-						Ray marching was used for rendering with emphasis on refraction and caustics.
+					Creating drawings and renders using computer graphics is one of the most exciting things I have ever learned. 
+					This sketchbook showcases some of the "artwork" I've crafted using OpenGL/WebGL.
+					For every artwork, I try to apply new techniques and learn more about OpenGL, or computer graphics in general.
 					</p>
-					<a href="https://www.wuwayne.com/shallow-water/">Click here to try it out!</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<div style="padding:54.58% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/282231204?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>					<div class="row row-pt-md portfolio-navigation">
+					<div id="doodle" class="artwork">
+						<div style="padding:84.38% 0 0 0;position:relative;">
+							<iframe src="https://player.vimeo.com/video/263282138?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div><script src="https://player.vimeo.com/api/player.js"></script>
+						<h3>Attack on Titan</h3>
+						<p>
+							This is a 2D OpenGL drawing that uses immediate mode to draw the titan from Attack on Ttian (one of my favourite shows of all time).
+							The precise drawing was done by first building a quick tool in Blender to trace
+							out the shapes in a reference image and output the vertices for OpenGL drawing. 
+						</p>
+					</div>
+					<div id="universe" class="artwork">
+						<div style="padding:99.26% 0 0 0;position:relative;">
+							<iframe src="https://player.vimeo.com/video/269215868?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div><script src="https://player.vimeo.com/api/player.js"></script>
+						<h3>Universe</h3>
+						<p>
+							This is a 2D OpenGL drawing that uses immediate mode to draw simple orbiting spheres. 
+							The spheres were drawn with color blending for faking a shaded appearance.
+							Motion blur was also added by rendering previous frames together with the current one.
+						</p>
+					</div>
+					<div id="raytracing" class="artwork">
+						<p class="animate-box"><img src="images/ray-tracing.png" class="img-responsive"></p>
+						<h3>Ray Tracing</h3>
+						<p>
+							This is a 3D OpenGL render that uses ray tracing for rendering. 
+							Phong's Illumination model is used with basic material properties. 
+							Shadows and depth of field (DoF) were also added as part of global illumination.
+						</p>
+					</div>
+					<div id="endlessworld" class="artwork">
+						<div style="padding:100% 0 0 0;position:relative;">
+							<iframe src="https://player.vimeo.com/video/269223045?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div><script src="https://player.vimeo.com/api/player.js"></script>
+						<h3>Endless World</h3>
+						<p>
+							This is a 3D OpenGL render that generates terrain using Perlim Noise, and uses L-system for generating simple trees.
+							The app features three different looks including wireframe, flat shaded, and smooth shaded using OpenGL's built in
+							Gouraud Shading.
+						</p>
+					</div>
+
+					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="facialrig.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Prev </a>
+							<a href="shallowwater.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="index.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="sketchbook.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+							<a href="charactergui.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
 						</div>
 					</div>
 				</div>

@@ -1327,6 +1327,19 @@ blockquote .person cite {
   margin-top: 10px;
 }
 
+.artwork {
+  margin-bottom: 30px;
+}
+
+.artwork h3 {
+  margin-bottom: 0;
+}
+
+.artwork p {
+  text-align: justify;
+  margin-bottom: 0;
+}
+
 
 @media screen and (max-width: 768px) {
   .slide {

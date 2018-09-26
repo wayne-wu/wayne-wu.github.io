@@ -1317,14 +1317,19 @@ blockquote .person cite {
   max-width: 70%;
 }
 
-.slide {
+/* .slide {
   width: 100%;
   display: flex;
   justify-content: center;
+} */
+
+.slide {
+  margin-top: 20px;
 }
 
-.workslide {
-  margin-top: 10px;
+.slide p {
+  text-align: justify;
+  margin: 0;
 }
 
 .artwork {
@@ -1337,6 +1342,8 @@ blockquote .person cite {
 
 .artwork p {
   text-align: justify;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 0;
 }
 

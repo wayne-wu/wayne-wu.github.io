@@ -72,8 +72,97 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<img src="images/housefracture.jpg" class="img-responsive">
-					<img src="images/rbd/rbd_motivations.png" class="img-responsive workslide">
-					<img src="images/rbd/rbd_objectives.png" class="img-responsive workslide">
+					<div class="slide">
+						<img src="images/rbd/rbd_motivations.png" class="img-responsive">
+						<p>
+							Looking at the existing workflow, these were the main problems noticed. 
+							SimpleBullet is a modular toolkit developed by ILM back in 2015 and has since been integrated into WDAS and Pixar's pipelines.
+							Although the exact implementation of SimpleBullet is not available, attending the talk at SIGGRAPH 2018 gave some insights as to how the system works.
+						</p>
+					</div>
+					<div class="slide"> 
+						<img src="images/rbd/rbd_objectives.png" class="img-responsive">
+						<p>
+							With a clearer understanding of the problem space, six main design focuses were listed to drive the development of the solution.
+							These objectives were created based on discussions with WDAS as well as analysis on the existing workflow.
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/concrete_recursivefracture.png" class="img-responsive">
+						<p>
+							To obtain nice size variations for concrete, RBD Recursive Fracture was developed which allows users to specify how many sub-fracture level is needed.
+							Each fracture level can be scattered differently using a callback mechanism.
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/csg_voronoi.png" class="img-responsive">
+						<p>
+							Edge detail for concrete is done with CSG Voronoi, which uses Voronoi to drive a Boolean fracture. 
+							This method is (believed to be) what SimpleBullet uses internally for fracturing.
+							Using CSG Voronoi allows you to obtain noised edge without worrying about 1) generating cutting planes 2) displacing edge points.
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/glass_fracture.png" class="img-responsive">
+						<p>
+							Glass fracturing follows the fractography of glass closely. The fracturing is driven by one or more impact points,
+							which will generate the corresponding radial, concentric cracks and chipping. Everything here is done with Voronoi.
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/wood_fracture.png" class="img-responsive">
+						<p>
+							Wood fracturing also follows closely to fracture mechanics, especially for automatically determining the direction of fracturing. 
+							The main features of wood are the grain and splinters. Unlike traditional Voronoi approach, this method uses Boolean
+							which provides much better control and result.
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/fracture_result.png" class="img-responsive">
+						<p>
+							These were some of the fracture results obtained using RBD Material Fracture. 
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/rbd_familiy.png" class="img-responsive">
+						<p>
+							To modularize the workflow, a series of RBD nodes were introduced.
+							These nodes follow the new multi-input/output paradigm established, similar to Vellum.
+							Users can work exclusively with just the geometry (like the old ways) if they're not comfortable with the multi-input/output system.
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/polymorphism.png" class="img-responsive">
+						<p>
+							RBD Material Fracture leverages some of the latest tools introduced in Houdini, most noticeably the Invoke SOP.
+							Invoke SOP was introduced to provide callback functionalities and opened the door for polymorphic structure in Houdini.
+							RBD Recursive Fracture is achieved by using Invoke SOP. The use of RBD Recursive Fracture makes the usage of Voronoi and Boolean Fracture SOPs much lower level.
+							In a way, the RBD Recursive Fracture "inherits" from both Voronoi and Boolean fracture and is promoted to be the more common tool. 
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/auto_constraints.png" class="img-responsive">
+						<p>
+							To reduce the complexity of managing constraints, a new workflow is designed such that constraints are automatically updated/created upon fracturing.
+							In this workflow, the idea of having constraint network outputted with the fractured geometry at any fracturing step is the key. 
+							RBD Rewire Constraints is created to rewire constraints based on the newly fractured geometry, and preserve tagged connections. 
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/house_fracture.png" class="img-responsive">
+						<p>
+							Using multiple RBD Material Fracture nodes based on each material/object type, the fracturing of the house becomes much easier. 
+							Using the group filter, specific parts of the input geometry can be isolated to be fractured in-place.
+						</p>
+					</div>
+					<div class="slide">
+						<img src="images/rbd/house_constraints.png" class="img-responsive">
+						<p>
+							The constraint network after each RBD Material Fracture node is updated without any additional modifications. 
+							Pay attention to the colours of the constraints, which represent the types of connection (i.e. window to frame, wall to roof support etc.).
+							Notice how the connections are retained and updated based on how the geometry is fractured.
+						</p>
+					</div>
 					<!-- <div class="slide">
 						<div class="smallslide">
 								<h3>Motivations</h3>

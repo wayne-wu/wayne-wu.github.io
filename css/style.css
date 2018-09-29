@@ -1309,19 +1309,16 @@ blockquote .person cite {
   margin: 0 0 5px 0;
 }
 
-.smallslide {
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: inline-block;
-  max-width: 70%;
+.overview {
+  margin-top: 50px;
+  border-style: solid none none none;
+  border-width: 2px;
+  border-color: #cabcab;
 }
 
-/* .slide {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-} */
+.overview h3 {
+  text-align: center;
+}
 
 .slide {
   margin-top: 20px;
@@ -1346,6 +1343,9 @@ blockquote .person cite {
   margin-right: 5px;
   margin-bottom: 0;
 }
+
+
+
 
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Wayne Wu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="fh5co-top-logo">
+				<div id="fh5co-logo"><a href="index.html">Wayne Wu</a></div>
+			</div>
+			<div class="fh5co-top-menu menu-1 text-center">
+				<ul>
+					<li><a href="index.html">Work</a></li>
+					<li><a href="about.html">About Me</a></li>
+					<li><a href="files/resume-waynewu.pdf" target="_blank">Resume</a></li>
+				</ul>
+			</div>
+			<div class="fh5co-top-social menu-1 text-right">
+				<ul class="fh5co-social">
+					<li><a href="https://linkedin.com/in/wayne-wu"><i class="icon-linkedin"></i></a></li>
+					<li><a href="https://github.com/wayne-wu"><i class="icon-github"></i></a></li>
+					<li><a href="https://instagram.com/danceformewayne"><i class="icon-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div id="fh5co-author">
+		<div class="container">
+			<div class="row top-line animate-box">
+				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
+					<h2>Inverse Kinematics as an Optimization Problem</h2>
+					<P align="justify">
+					Inverse kinematics has important applications in the field of computer graphics and robotics. 
+					The goal of this project is to understand the IK system as an optimization problem, 
+					and evaluate some of the numerical techniques used to solve the problem. 
+					IK system can be treated as an optimization problem by minimizing the distance error between the current and desired end effector positions.
+					To calculate the current position, the Denavit-Hartenberg (DH) model is used for easier implementation (in MATLAB). A basic human rig is used in this project as the system to optimize for.
+					Three optimization techniques were investigated, specifically the Interior Point method, the Quasi-Newton method, and the Cyclic Coordinate Descent method. 
+					Two animations were generated to analyze the visual result and computational performance of each method. 
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<img src="images/housefracture.jpg" class="img-responsive">
+
+					<div class="overview">
+						<h3>Overview</h3>
+						<div class="slide">
+							<img src="images/rbd/rbd_motivations.png" class="img-responsive">
+							<p>
+								Looking at the existing workflow, these were the main problems noticed. 
+								SimpleBullet is a modular toolkit developed by ILM back in 2015 and has since been integrated into WDAS and Pixar's pipelines.
+								Although the exact implementation of SimpleBullet is not available, attending the talk at SIGGRAPH 2018 gave some insights as to how the system works.
+							</p>
+						</div>
+						<div class="slide"> 
+							<img src="images/rbd/rbd_objectives.png" class="img-responsive">
+							<p>
+								With a clearer understanding of the problem space, six main design focuses were listed to drive the development of the solution.
+								These objectives were created based on discussions with WDAS as well as analysis on the existing workflow.
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/concrete_recursivefracture.png" class="img-responsive">
+							<p>
+								To obtain nice size variations for concrete, RBD Recursive Fracture was developed which allows users to specify how many sub-fracture level is needed.
+								Each fracture level can be scattered differently using a callback mechanism.
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/csg_voronoi.png" class="img-responsive">
+							<p>
+								Edge detail for concrete is done with CSG Voronoi, which uses Voronoi to drive a Boolean fracture. 
+								This method is (believed to be) what SimpleBullet uses internally for fracturing.
+								Using CSG Voronoi allows you to obtain noised edge without worrying about 1) generating cutting planes 2) displacing edge points.
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/glass_fracture.png" class="img-responsive">
+							<p>
+								Glass fracturing follows the fractography of glass closely. The fracturing is driven by one or more impact points,
+								which will generate the corresponding radial, concentric cracks and chipping. Everything here is done with Voronoi.
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/wood_fracture.png" class="img-responsive">
+							<p>
+								Wood fracturing also follows closely to fracture mechanics, especially for automatically determining the direction of fracturing. 
+								The main features of wood are the grain and splinters. Unlike traditional Voronoi approach, this method uses Boolean
+								which provides much better control and result.
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/fracture_result.png" class="img-responsive">
+							<p>
+								These were some of the fracture results obtained using RBD Material Fracture. 
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/rbd_familiy.png" class="img-responsive">
+							<p>
+								To modularize the workflow, a series of RBD nodes were introduced.
+								These nodes follow the new multi-input/output paradigm established, similar to Vellum.
+								Users can work exclusively with just the geometry (like the old ways) if they're not comfortable with the multi-input/output system.
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/polymorphism.png" class="img-responsive">
+							<p>
+								RBD Material Fracture leverages some of the latest tools introduced in Houdini, most noticeably the Invoke SOP.
+								Invoke SOP was introduced to provide callback functionalities and opened the door for polymorphic structure in Houdini.
+								RBD Recursive Fracture is achieved by using Invoke SOP. The use of RBD Recursive Fracture makes the usage of Voronoi and Boolean Fracture SOPs much lower level.
+								In a way, the RBD Recursive Fracture "inherits" from both Voronoi and Boolean fracture and is promoted to be the more common tool. 
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/auto_constraints.png" class="img-responsive">
+							<p>
+								To reduce the complexity of managing constraints, a new workflow is designed such that constraints are automatically updated/created upon fracturing.
+								In this workflow, the idea of having constraint network outputted with the fractured geometry at any fracturing step is the key. 
+								RBD Rewire Constraints is created to rewire constraints based on the newly fractured geometry, and preserve tagged connections. 
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/house_fracture.png" class="img-responsive">
+							<p>
+								Using multiple RBD Material Fracture nodes based on each material/object type, the fracturing of the house becomes much easier. 
+								Using the group filter, specific parts of the input geometry can be isolated to be fractured in-place.
+							</p>
+						</div>
+						<div class="slide">
+							<img src="images/rbd/house_constraints.png" class="img-responsive">
+							<p>
+								The constraint network after each RBD Material Fracture node is updated without any additional modifications. 
+								Pay attention to the colours of the constraints, which represent the types of connection (i.e. window to frame, wall to roof support etc.).
+								Notice how the connections are retained and updated based on how the geometry is fractured.
+							</p>
+						</div>
+						<div class="slide">
+							<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/291934239#t=3m30s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+							<p>
+								Check out the tool from the sneak peak of H17! (3m30s - 4m05s)
+							</p>
+						</div>
+					</div>
+					<!-- <div class="slide">
+						<div class="smallslide">
+								<h3>Motivations</h3>
+								<ul>
+									<li>Challenging to get the nice look.</li>
+									<li>Multi-material, Heterogeneous setup.</li>
+									<li>Complicated constraint network to manage.</li>
+									<li>Long iteration time.</li>
+									<li>Art-directable fracturing and destruction.</li>
+									<li>SimpleBulle.</li>
+								</ul>
+							</div>
+							<div class="smallslide">
+								<h3>Requirements</h3>
+								<ul>
+									<li>Aesthetic</li>
+									<li>Art Directability</li>
+									<li>Flexibility</li>
+									<li>Functionality</li>
+									<li>Performance</li>
+									<li>Extendability</li>
+								</ul>
+							</div>
+					</div> -->
+
+					<div class="row row-pt-md portfolio-navigation">
+						<div class="col-xs-4 text-left">
+							<a href="#" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Prev </a>
+						</div>
+						<div class="col-xs-4 text-center">
+							<a href="index.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
+						</div>
+						<div class="col-xs-4 text-right">
+							<a href="clothsim.html" class="btn btn-primary btn-outline">Next <i class="icon-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; Wayne Wu</small> 
+					</p>
+					
+					<ul class="fh5co-social-icons">
+						<li><a href="https://linkedin.com/in/wayne-wu"><i class="icon-linkedin"></i></a></li>
+						<li><a href="https://github.com/wayne-wu"><i class="icon-github"></i></a></li>
+						<li><a href="https://instagram.com/danceformewayne"><i class="icon-instagram"></i></a></li>
+					</ul>
+					
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

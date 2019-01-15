@@ -462,9 +462,9 @@ h1, h2, h3, h4, h5, h6, figure {
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 50%;
-  position: relative;
   height: 300px;
   width: 300px;
+  margin: auto;
   margin-bottom: 20px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;

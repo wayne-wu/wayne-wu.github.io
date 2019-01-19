@@ -48,7 +48,7 @@ body {
 }
 
 a {
-  color: rgba(0,0,0,0.4);
+  color: #34a5ea;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;

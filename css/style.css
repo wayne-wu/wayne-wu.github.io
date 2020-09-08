@@ -461,6 +461,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-color: black;
   border-radius: 50%;
   height: 300px;
   width: 300px;
@@ -477,7 +478,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table;
   height: 300px;
   border-radius: 50%;
-  width: 100.1%;
+  width: 100%;
   opacity: 0;
   background: rgba(237, 235, 232, 0.9);
   -webkit-transition: 0.3s;

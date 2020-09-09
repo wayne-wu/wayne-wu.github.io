@@ -479,7 +479,7 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 300px;
   border-radius: 50%;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   background: rgba(237, 235, 232, 0.7);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;

@@ -14,6 +14,11 @@
   --gold: rgb(148, 124, 16);
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
 body {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 300;
@@ -390,8 +395,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-started,
-#fh5co-author,
-#fh5co-work,
+#about,
+#projects,
 #fh5co-about,
 #fh5co-contact,
 #fh5co-footer {
@@ -400,8 +405,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   #fh5co-started,
-  #fh5co-author,
-  #fh5co-work,
+  #about,
+  #projects,
   #fh5co-about,
   #fh5co-contact,
   #fh5co-footer {
@@ -1322,11 +1327,12 @@ blockquote .person cite {
 .overview {
   margin-top: 50px;
   border-style: solid none none none;
-  border-width: 2px;
+  border-width: 1px;
   border-color: var(--gold);
 }
 
 .overview h3 {
+  padding-top: 10px;
   text-align: center;
 }
 

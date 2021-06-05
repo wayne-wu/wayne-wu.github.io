@@ -41,11 +41,11 @@
   color: #e6b91e;
 }
 .icon-github:hover {
-  color: #000000;
+  color: #800080;
 }
 .icon-github-color:before {
   content: "\eab0";
-  color: #000000;
+  color: #800080;
 }
 .icon-instagram-color:before {
   content: "\ec6d";

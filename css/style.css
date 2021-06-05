@@ -10,13 +10,17 @@
 * 	Template Style 
 *
 * ======================================================= */
+:root {
+  --gold: rgb(148, 124, 16);
+}
+
 body {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
-  color: #828282;
-  background: #fff;
+  color: #9c9c9c;
+  background: #000;
 }
 
 #page {
@@ -48,13 +52,13 @@ body {
 }
 
 a {
-  color: #34a5ea;
+  color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: rgba(0,0,0,0.4);
+  color: var(--gold);
   outline: none;
   text-decoration: none;
 }
@@ -64,7 +68,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color: #000;
+  color: #fff;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -91,8 +95,8 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   padding: 25px 0;
-  z-index: 1;
-  background: #edebe8;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav {
@@ -131,11 +135,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav .fh5co-social li a {
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
 .fh5co-nav a {
   padding: 5px 0;
-  color: #000;
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav .menu-1, .fh5co-nav .menu-2 {
@@ -166,7 +170,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-nav .menu-2 li input[type=text]:focus {
   width: 100%;
   outline: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #fff;
 }
 .fh5co-nav .menu-2 li button {
   margin-top: 4px;
@@ -175,13 +179,13 @@ h1, h2, h3, h4, h5, h6, figure {
   border: none;
 }
 .fh5co-nav .menu-2 li button i {
-  color: rgba(0, 0, 0, 0.5);
+  color: #fff;
 }
 .fh5co-nav .menu-2 li button:hover, .fh5co-nav .menu-2 li button:focus {
   background: transparent !important;
 }
 .fh5co-nav .menu-2 li button:hover i, .fh5co-nav .menu-2 li button:focus i {
-  color: black;
+  color: #fff;
 }
 .fh5co-nav ul {
   padding: 0;
@@ -199,13 +203,13 @@ h1, h2, h3, h4, h5, h6, figure {
   letter-spacing: 2px;
   font-size: 12px;
   padding: 30px 10px;
-  color: rgba(0, 0, 0, 0.9);
+  color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
-  color: black;
+  color: var(--gold);
 }
 .fh5co-nav ul li.has-dropdown {
   position: relative;
@@ -265,10 +269,10 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .fh5co-nav ul li.has-dropdown:hover a, .fh5co-nav ul li.has-dropdown:focus a {
-  color: #000;
+  color: #fff;
 }
 .fh5co-nav ul li.active > a {
-  color: rgba(0,0,0,0.4) !important;
+  color: var(--gold) !important;
 }
 .fh5co-nav ul li .form-group {
   border: 1px solid red;
@@ -480,7 +484,7 @@ h1, h2, h3, h4, h5, h6, figure {
   border-radius: 50%;
   width: 100%;
   opacity: 1;
-  background: rgba(237, 235, 232, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -494,7 +498,7 @@ h1, h2, h3, h4, h5, h6, figure {
   
   .work .work-grid .inner {
     opacity: 1;
-    background: rgba(237, 235, 232, 0.7);
+    background: rgba(0, 0, 0, 0.7);
   }
 }
 .work .work-grid .inner .desc {
@@ -511,20 +515,16 @@ h1, h2, h3, h4, h5, h6, figure {
   line-height: 24px;
 }
 .work .work-grid .inner .desc h3 a {
-  color: #000;
+  color: #fff;
 }
 .work .work-grid .inner .desc .cat {
   font-size: 11px;
   letter-spacing: 2px;
-  color: #000;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
-  .work .work-grid .inner .desc .cat {
-    color: #333333;
-  }
-}
 .work:hover .inner, .work:focus .inner {
+  background: rgba(0, 0, 0, 0.4);
   opacity: 1;
 }
 .work:hover .desc h3 a, .work:focus .desc h3 a {
@@ -594,7 +594,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #000;
+  color: #fff;
 }
 .fh5co-heading h3 {
   font-size: 18px;
@@ -661,7 +661,7 @@ h1, h2, h3, h4, h5, h6, figure {
   letter-spacing: 1px;
 }
 .author .desc .fh5co-social-icons li a {
-  color: rgba(0,0,0,0.4);
+  color: #fff;
   padding-left: 0;
   padding-right: 10px;
 }
@@ -975,28 +975,28 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   width: 25px;
   height: 2px;
-  color: #252525;
+  color: #fff;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #252525;
+  background: #fff;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
   content: '';
   width: 25px;
   height: 2px;
-  background: #252525;
+  background: #fff;
   position: absolute;
   left: 0;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
   color: #fff;
-  background: #000;
+  background: #fff;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i::before, .fh5co-nav-toggle.fh5co-nav-white > i::after {
-  background: #000;
+  background: #fff;
 }
 
 .fh5co-nav-toggle i::before {
@@ -1088,7 +1088,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .btn-primary {
   background: rgba(0,0,0,0.4);
   color: #fff;
-  border: 2px solid rgba(0,0,0,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   /*background: #d4c8bb !important;
@@ -1098,12 +1098,13 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: rgba(0,0,0,0.4);
-  border: 2px solid rgba(0,0,0,0.4);
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: rgba(0,0,0,0.4);
-  color: #fff;
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 .btn-success {
@@ -1322,7 +1323,7 @@ blockquote .person cite {
   margin-top: 50px;
   border-style: solid none none none;
   border-width: 2px;
-  border-color: rgba(0,0,0,0.4);
+  border-color: var(--gold);
 }
 
 .overview h3 {

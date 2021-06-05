@@ -1,33 +1,32 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Wayne Wu</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/batman.png">
-	<meta name="description" content="Wayne Wu's Portfolio" />
-	<link rel="icon" type="image/png" href="images/batman.png">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-
-	</head>
-	<body>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Wayne Wu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="images/batman.png">
+		<meta name="description" content="Wayne Wu's Portfolio" />
+		<link rel="icon" type="image/png" href="images/batman.png">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 		
-	<div class="fh5co-loader"></div>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		
+		<!-- Modernizr JS -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+	</head>
+
+	<body>	
+	<div class="fodyh5co-loader"></div>
 	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
@@ -268,7 +267,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="author">
-						<div class="author-inner animate-box" style="background-image: url(images/dp.jpg);">
+						<div class="author-inner animate-box" style="background-image: url(images/dp.jpg); border-radius: 25px;">
 						</div>
 						<div class="desc animate-box">
 							<span>Systems Design Engineering</span>
@@ -338,6 +337,23 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- WebGL Render -->
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.net.min.js"></script>
+	<script>
+		VANTA.NET({
+		el: "#fh5co-work",
+		mouseControls: true,
+		touchControls: true,
+		gyroControls: false,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 0.50,
+		scaleMobile: 1.00,
+		color: 0xffffff,
+		backgroundColor: 0x0
+		})
+	</script>
 
 	</body>
 </html>

@@ -67,14 +67,26 @@ const lineMat = new THREE.LineBasicMaterial({ vertexColors: THREE.VertexColors, 
 var lineMesh = new THREE.LineSegments(lineGeo, lineMat);
 grp.add(lineMesh);
 
+// Glow sprite
+var spriteMat = new THREE.SpriteMaterial({
+    map: new THREE.TextureLoader().load('../images/glow.png'),
+    color: fg,
+    transparent: true,
+    blending: THREE.AdditiveBlending
+})
+
 const genPoint = function(x, y, z){
     // Create a point geo at given position
-    const oGeo = new THREE.SphereGeometry(/*radius*/ rand(0.2,0.4), /*wSegments*/ 12, /*hSegments*/ 12);
+    let r = rand(0.2, 0.4);
+    const oGeo = new THREE.SphereGeometry(/*radius*/ r, /*wSegments*/ 12, /*hSegments*/ 12);
     const oMat = new THREE.MeshBasicMaterial({ color: fg });
     let oMesh = new THREE.Mesh(oGeo, oMat);
     grp.add(oMesh);
     oMesh.position.set(x, y, z);
-    oMesh.r = rand(-2, 2);
+    oMesh.r = rand(-3, 3);
+    let sprite = new THREE.Sprite(spriteMat);
+    sprite.scale.set(5*r, 5*r, 1);
+    oMesh.add(sprite);
     points.push(oMesh);
 }
 

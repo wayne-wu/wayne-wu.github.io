@@ -16,7 +16,7 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #000;
+  background: #000;
 }
 
 body {
@@ -38,6 +38,7 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
 .offcanvas #page {
   overflow: hidden;
   position: absolute;
@@ -1260,7 +1261,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(../images/loader.gif) center no-repeat #fff;
+  background: url(../images/loader.gif) center no-repeat #000;
 }
 
 .js .animate-box {

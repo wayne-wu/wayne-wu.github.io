@@ -29,7 +29,7 @@ renderer.domElement.style.position = "absolute";
 renderer.domElement.style.zIndex = 0;
 renderer.domElement.style.top = 0;
 renderer.domElement.style.left = 0;
-renderer.domElement.style.background = ""; 
+renderer.domElement.style.background = "#000000";
 renderer.domElement.classList.add("render-canvas");
 
 // Set size
@@ -41,8 +41,13 @@ const setSize = function (){
 setSize();
 renderer.setSize(width, height)
 
+// Set Color
+var fg = new THREE.Color(0xdbdbdb);
+var bg = new THREE.Color(0x000000);
+
 // Initialize Scene
 const scene = new THREE.Scene();
+scene.background = bg;
 
 var grp = new THREE.Group();
 grp.position.set(0,0,0);
@@ -54,10 +59,6 @@ const i = n * n * 2;  // number of connection points
 var points = [];
 var linePositions = new Float32Array(i * i * 3);
 var lineColors = new Float32Array(i * i * 3);
-
-// Set Color
-var fg = new THREE.Color(0xdbdbdb);
-var bg = new THREE.Color(0x000000);
 
 // Create Line Geometry
 const lineGeo = new THREE.BufferGeometry();
@@ -181,8 +182,9 @@ const isOnScreen = function() {
     return s - window.innerHeight <= i && i <= s + t;
 }
 
+var req;
 const animate = function () {
-    requestAnimationFrame(animate);
+    req = requestAnimationFrame(animate);
     
     if(!isOnScreen)
         return;
@@ -236,7 +238,18 @@ const animate = function () {
     lineMesh.geometry.attributes.color.needsUpdate = true;
 
     renderer.render( scene, camera );
-    renderer.setClearColor(bg, 1);
 };
+
+const destroy = function() {
+    window.removeEventListener("mousemove", windowMouseMoveWrapper);
+    window.removeEventListener("scroll", windowMouseMoveWrapper);
+    window.removeEventListener("touchstart", windowTouchWrapper);
+    window.removeEventListener("touchmove", windowTouchWrapper);
+    window.removeEventListener("resize", resize);
+    window.cancelAnimationFrame(req);
+    el.removeChild(renderer.domElement);
+}
+
+window.onbeforeunload = destroy;
 
 animate();

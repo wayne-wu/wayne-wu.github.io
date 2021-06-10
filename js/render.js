@@ -49,9 +49,14 @@
     setSize();
     renderer.setSize(width, height)
 
-    // Set Color
-    var fg = new THREE.Color(0xdbdbdb);
-    var bg = new THREE.Color(0x000000);
+    // Settings
+    var fgSphere = new THREE.Color(0xdbdbdb);  // sphere color
+    var fgLine = new THREE.Color(0x947c10);  // line color
+    var bg = new THREE.Color(0x000000);  // background color
+    const scale = 1;  // scale
+    const n = 15;  // number of points
+    const d = 15;  // spacing
+    const maxD = 20;  // maximum distance for connection
 
     // Initialize Scene
     const scene = new THREE.Scene();
@@ -61,8 +66,6 @@
     grp.position.set(0,0,0);
     scene.add(grp);
 
-    const n = 10;  // number of points
-    const d = 15;  // spacing
     const i = n * n * 2;  // number of connection points
     var points = [];
     var linePositions = new Float32Array(i * i * 3);
@@ -79,7 +82,7 @@
     // Glow sprite
     var spriteMat = new THREE.SpriteMaterial({
         map: new THREE.TextureLoader().load('../images/glow.png'),
-        color: fg,
+        color: fgSphere,
         transparent: true,
         blending: THREE.AdditiveBlending
     })
@@ -88,11 +91,11 @@
         // Create a point geo at given position
         let r = rand(0.2, 0.4);
         const oGeo = new THREE.SphereGeometry(/*radius*/ r, /*wSegments*/ 12, /*hSegments*/ 12);
-        const oMat = new THREE.MeshBasicMaterial({ color: fg });
+        const oMat = new THREE.MeshBasicMaterial({ color: fgSphere });
         let oMesh = new THREE.Mesh(oGeo, oMat);
         grp.add(oMesh);
         oMesh.position.set(x, y, z);
-        oMesh.r = rand(-3, 3);
+        oMesh.r = rand(-2, 2);
         let sprite = new THREE.Sprite(spriteMat);
         sprite.scale.set(5*r, 5*r, 1);
         oMesh.add(sprite);
@@ -114,7 +117,7 @@
 
     // Camera
     const camera = new THREE.PerspectiveCamera( 25, width / height, 0.01, 1e4 );
-    camera.position.set(50, 100, 150);
+    camera.position.set(100, 200, 300);
     scene.add(camera);
 
     // Lighting
@@ -171,7 +174,7 @@
     const resize = function() {
         setSize(),
         camera && ((camera.aspect = width / height), "function" == typeof camera.updateProjectionMatrix && camera.updateProjectionMatrix()),
-        renderer && (renderer.setSize(width, height), renderer.setPixelRatio(window.devicePixelRatio));
+        renderer && (renderer.setSize(width, height), renderer.setPixelRatio(window.devicePixelRatio / scale));
     };
     resize();
 
@@ -212,7 +215,7 @@
         {
             const pt1 = points[i];
             if(pt1.r !== 0)
-            {
+            {   
                 let t = Math.atan2(pt1.position.z, pt1.position.x) + 25e-5 * pt1.r;
                 let e = Math.sqrt(pt1.position.z * pt1.position.z + pt1.position.x * pt1.position.x);
                 pt1.position.x = e * Math.cos(t);
@@ -221,10 +224,9 @@
             for(let l = i; l < points.length; l++)
             {
                 const pt2 = points[l];
-                const maxDist = 20;
                 let dist = pt1.position.distanceTo(pt2.position)
-                if(dist < maxDist){
-                    let c = new THREE.Color(0).lerp(fg, 2*(1-(dist/maxDist)));
+                if(dist < maxD){
+                    let c = new THREE.Color(0).lerp(fgLine, 2*(1-(dist/maxD)));
                     linePositions[j++] = pt1.position.x;
                     linePositions[j++] = pt1.position.y;
                     linePositions[j++] = pt1.position.z;

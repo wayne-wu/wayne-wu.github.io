@@ -51,7 +51,8 @@
 
     // Settings
     var fgSphere = new THREE.Color(0xdbdbdb);  // sphere color
-    var fgLine = new THREE.Color(0x947c10);  // line color
+    // var fgLine = new THREE.Color(0x947c10);  // line color
+    var fgLine = fgSphere;
     var bg = new THREE.Color(0x000000);  // background color
     const scale = 1;  // scale
     const n = 15;  // number of points

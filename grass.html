@@ -63,61 +63,36 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Real-Time Position-Based Crowd Simulation in WebGPU
+					<h2>Real-Time Grass Simulation and Rendering in Vulkan
 					</h2>
 					<P>
-						In thie project, we focus on simulating massive crowd behavior in real-time.
-						Specifically, we came across this <a href="https://arxiv.org/pdf/1802.02673.pdf" target="_blank">paper</a> by Weiss et. al that uses Position-Based Dynamics to simulate large dense crowd at interactive rate.
-						While the paper was originally implemented in CUDA and Unreal Engine, 
-						we decided to use WebGPU for both simulation and rendering as a mean to learn and understand a modern graphics API, 
-						while contributing a unique example to the early WebGPU community.
-						As far as we know, this project is the very first crowd simulation in WebGPU, and one of the first few in web.
+						This is a course project that implements the paper: 
+						<a href="https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf" target="_blank">
+							Responsive Real-Time Grass Rendering for General 3D Scenes (2017)</a>.
+						Using Vulkan, a compute shader is used to apply simple dynamics to the grass curves (e.g. wind and gravity forces),
+						while tesselation shaders are used to generate vertices and patches from the curves for rendering.
+						Culling operations are also implemented to improve the rendering performance of dense grass scene.
+						Overall, it was a very fun project that introduces the Vulkan API and how grass rendering works in real-time applications.
 					</p>
 					<p>
-					<a href="https://www.wuwayne.com/webgpu-crowd-simulation" target="_blank">Check it out live! (WebGPU Required)</a>
-					</p>
-					<p>
-						Or find out more on <a href="https://github.com/wayne-wu/webgpu-crowd-simulation" target="_blank">Github</a>.
+						Find out more on <a href="https://github.com/wayne-wu/Project5-Vulkan-Grass-Rendering" target="_blank">Github</a>.
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<img src="images/crowdsim.png" class="img-responsive">
-					<!-- <div class="slide">
-						<div class="smallslide">
-								<h3>Motivations</h3>
-								<ul>
-									<li>Challenging to get the nice look.</li>
-									<li>Multi-material, Heterogeneous setup.</li>
-									<li>Complicated constraint network to manage.</li>
-									<li>Long iteration time.</li>
-									<li>Art-directable fracturing and destruction.</li>
-									<li>SimpleBulle.</li>
-								</ul>
-							</div>
-							<div class="smallslide">
-								<h3>Requirements</h3>
-								<ul>
-									<li>Aesthetic</li>
-									<li>Art Directability</li>
-									<li>Flexibility</li>
-									<li>Functionality</li>
-									<li>Performance</li>
-									<li>Extendability</li>
-								</ul>
-							</div>
-					</div> -->
+					<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://user-images.githubusercontent.com/77313916/139769346-15b2f672-7666-4ccd-a473-662d80589295.mp4" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+					<!-- <img src="https://github.com/wayne-wu/Project5-Vulkan-Grass-Rendering/blob/master/img/cullingtestscene.png?raw=true" class="img-responsive"> -->
 
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="#" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
+							<a href="crowdsim.html" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="grass.html" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="blockusd.html" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>

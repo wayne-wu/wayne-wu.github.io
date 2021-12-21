@@ -50,7 +50,7 @@
     renderer.setSize(width, height)
 
     // Settings
-    var fgSphere = new THREE.Color(0xdbdbdb);  // sphere color
+    var fgSphere = new THREE.Color(0x808080);  // sphere color
     // var fgLine = new THREE.Color(0x947c10);  // line color
     var fgLine = fgSphere;
     var bg = new THREE.Color(0x000000);  // background color

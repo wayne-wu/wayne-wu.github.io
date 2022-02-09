@@ -63,36 +63,35 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Real-Time Grass Simulation and Rendering in Vulkan
+					<h2>GPU Path Tracer and Denoiser in CUDA
 					</h2>
 					<P>
-						This is a course project that implements the paper: 
-						<a href="https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf" target="_blank">
-							Responsive Real-Time Grass Rendering for General 3D Scenes (2017)</a>.
-						Using Vulkan, a compute shader is used to apply simple dynamics to the grass curves (e.g. wind and gravity forces),
-						while tesselation shaders are used to generate vertices and patches from the curves for rendering.
-						Culling operations are also implemented to improve the rendering performance of dense grass scene.
-						Overall, it was a very fun project that introduces the Vulkan API and how grass rendering works in real-time applications.
+						Global Illumination can be achieved with path tracing. This project implements a GPU path tracer, and subsequently a denoiser.
+						To begin with, the core workings of the path tracer were implemented using CUDA kernels. 
+						Futhermore, glTF was chosen as the 3D format for arbitrary mesh loading, instead of simpler format such as OBJ.
+						In order to support glTF, basic physically-based rendering techniques must be used for the metallic-roughness model which glTF uses,
+						in addition to the ability to load arbitrary textures.
+						Finally, a denoiser based on <a href="https://jo.dreggn.org/home/2010_atrous.pdf">A-Trous algorithm</a> was implemented.
 					</p>
 					<p>
-						Find out more on <a href="https://github.com/wayne-wu/Project5-Vulkan-Grass-Rendering" target="_blank">Github</a>.
+						Find out more on <a href="https://github.com/wayne-wu/Project3-CUDA-Path-Tracer" target="_blank">Github</a>.
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div style="padding:99.26% 0 0 0;position:relative;">
-						<iframe src="https://player.vimeo.com/video/665416720?autoplay=1&loop=1&autopause=0&muted=1&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow=autoplay></iframe>
+						<iframe src="https://player.vimeo.com/video/665858874?autoplay=1&loop=1&autopause=0&muted=1&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow=autoplay></iframe>
 					</div><script src="https://player.vimeo.com/api/player.js"></script>
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="crowdsim.html" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
+							<a href="grass.html" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="pathtracer.html" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="blockusd.html" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>

@@ -12,6 +12,7 @@
 * ======================================================= */
 :root {
   --gold: rgb(148, 124, 16);
+  --text: #bdbcbc;
 }
 
 html {
@@ -24,7 +25,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
-  color: #9c9c9c;
+  color: var(--text);
   background: #000;
 }
 
@@ -472,7 +473,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background-position: center center;
   background-repeat: no-repeat;
   background-color: black;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   height: 300px;
   width: 300px;
   margin: auto;
@@ -487,7 +488,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .work .work-grid .inner {
   display: table;
   height: 300px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 100%;
   opacity: 1;
   background: rgba(0, 0, 0, 0.7);
@@ -608,7 +609,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-heading p {
   font-size: 18px;
   line-height: 1.5;
-  color: #828282;
+  color: var(--text);
 }
 .fh5co-heading span {
   display: inline-block;

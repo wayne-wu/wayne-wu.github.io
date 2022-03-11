@@ -5,27 +5,27 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Wayne Wu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/batman.png">
+	<link rel="icon" type="image/png" href="/images/batman.png">
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
+	<script src="/js/respond.min.js"></script>
 	<![endif]-->
 
 	</head>
@@ -43,7 +43,7 @@
 				<ul>
 					<li><a href="/#projects">Work</a></li>
 					<li><a href="/#about">About Me</a></li>
-					<li><a href="files/resume-waynewu.pdf" target="_blank">Resume</a></li>
+					<li><a href="/files/resume-waynewu.pdf" target="_blank">Resume</a></li>
 				</ul>
 			</div>
 			<div class="fh5co-top-social menu-1 text-right">
@@ -74,12 +74,12 @@
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<img src="images/housefracture.jpg" class="img-responsive">
+					<img src="/images/housefracture.jpg" class="img-responsive">
 
 					<div class="overview">
 						<h3>Overview</h3>
 						<div class="slide">
-							<img src="images/rbd/rbd_motivations.png" class="img-responsive">
+							<img src="/images/rbd/rbd_motivations.png" class="img-responsive">
 							<p>
 								Looking at the existing workflow, these were the main problems noticed. 
 								<a href="https://dl.acm.org/citation.cfm?doid=3214745.3214814">SimpleBullet</a> is a modular toolkit developed by ILM back in 2015 and has since been integrated into WDAS and Pixar's pipelines.
@@ -87,21 +87,21 @@
 							</p>
 						</div>
 						<div class="slide"> 
-							<img src="images/rbd/rbd_objectives.png" class="img-responsive">
+							<img src="/images/rbd/rbd_objectives.png" class="img-responsive">
 							<p>
 								With a clearer understanding of the problem space, six main design focuses were listed to drive the development of the solution.
 								These objectives were created based on discussions with WDAS as well as analysis on the existing workflow.
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/concrete_recursivefracture.png" class="img-responsive">
+							<img src="/images/rbd/concrete_recursivefracture.png" class="img-responsive">
 							<p>
 								To obtain nice size variations for concrete, RBD Recursive Fracture was developed which allows users to specify how many sub-fracture level is needed.
 								Each fracture level can be scattered differently using a callback mechanism.
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/csg_voronoi.png" class="img-responsive">
+							<img src="/images/rbd/csg_voronoi.png" class="img-responsive">
 							<p>
 								Edge detail for concrete is done with CSG Voronoi, which uses Voronoi to drive a Boolean fracture. 
 								This method is (believed to be) what SimpleBullet uses internally for fracturing.
@@ -109,14 +109,14 @@
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/glass_fracture.png" class="img-responsive">
+							<img src="/images/rbd/glass_fracture.png" class="img-responsive">
 							<p>
 								Glass fracturing follows the fractography of glass closely. The fracturing is driven by one or more impact points,
 								which will generate the corresponding radial, concentric cracks and chipping. Everything here is done with Voronoi.
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/wood_fracture.png" class="img-responsive">
+							<img src="/images/rbd/wood_fracture.png" class="img-responsive">
 							<p>
 								Wood fracturing also follows closely to fracture mechanics, especially for automatically determining the direction of fracturing. 
 								The main features of wood are the grain and splinters. Unlike traditional Voronoi approach, this method uses Boolean
@@ -124,13 +124,13 @@
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/fracture_result.png" class="img-responsive">
+							<img src="/images/rbd/fracture_result.png" class="img-responsive">
 							<p>
 								These were some of the fracture results obtained using RBD Material Fracture. 
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/rbd_familiy.png" class="img-responsive">
+							<img src="/images/rbd/rbd_familiy.png" class="img-responsive">
 							<p>
 								To modularize the workflow, a series of RBD nodes were introduced.
 								These nodes follow the new multi-input/output paradigm established, similar to Vellum.
@@ -138,7 +138,7 @@
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/polymorphism.png" class="img-responsive">
+							<img src="/images/rbd/polymorphism.png" class="img-responsive">
 							<p>
 								RBD Material Fracture leverages some of the latest tools introduced in Houdini, most noticeably the Invoke SOP.
 								Invoke SOP was introduced to provide callback functionalities and opened the door for polymorphic structure in Houdini.
@@ -147,7 +147,7 @@
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/auto_constraints.png" class="img-responsive">
+							<img src="/images/rbd/auto_constraints.png" class="img-responsive">
 							<p>
 								To reduce the complexity of managing constraints, a new workflow is designed such that constraints are automatically updated/created upon fracturing.
 								In this workflow, the idea of having constraint network outputted with the fractured geometry at any fracturing step is the key. 
@@ -155,14 +155,14 @@
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/house_fracture.png" class="img-responsive">
+							<img src="/images/rbd/house_fracture.png" class="img-responsive">
 							<p>
 								Using multiple RBD Material Fracture nodes based on each material/object type, the fracturing of the house becomes much easier. 
 								Using the group filter, specific parts of the input geometry can be isolated to be fractured in-place.
 							</p>
 						</div>
 						<div class="slide">
-							<img src="images/rbd/house_constraints.png" class="img-responsive">
+							<img src="/images/rbd/house_constraints.png" class="img-responsive">
 							<p>
 								The constraint network after each RBD Material Fracture node is updated without any additional modifications. 
 								Pay attention to the colours of the constraints, which represent the types of connection (i.e. window to frame, wall to roof support etc.).
@@ -203,13 +203,13 @@
 
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="circles.html" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
+							<a href="/work/circles" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="clothsim.html" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="/work/clothsim" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -244,15 +244,15 @@
 	</div>
 	
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<script src="/js/main.js"></script>
 
 	</body>
 </html>

@@ -5,27 +5,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Wayne Wu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/batman.png">
+	<link rel="icon" type="image/png" href="/images/batman.png">
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
+
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
+	<script src="/js/respond.min.js"></script>
 	<![endif]-->
 
 	</head>
@@ -43,7 +45,7 @@
 				<ul>
 					<li><a href="/#projects">Work</a></li>
 					<li><a href="/#about">About Me</a></li>
-					<li><a href="files/resume-waynewu.pdf" target="_blank">Resume</a></li>
+					<li><a href="/files/resume-waynewu.pdf" target="_blank">Resume</a></li>
 				</ul>
 			</div>
 			<div class="fh5co-top-social menu-1 text-right">
@@ -61,27 +63,69 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Shallow Water <a href="https://github.com/wayne-wu/shallow-water"><i class="icon-github"></i></a></h2>
+					<h2>Procedural Block-based USD Workflows in Conduit</h2>
 					<P>
-						This project is a shallow water simulation done in WebGL, using modified shallow water equations.
-						The PDEs were solved using finite difference approximation with GPGPU.
-						Ray marching was used to render the implicit surface with emphasis on refraction,
-						while caustics were achieved with photon mapping.
+					This was a <a href="https://s2021.siggraph.org/presentation/?id=gensub_294&sess=sess184">talk given at SIGGRAPH 2021</a>
+					based on workflows developed at Blue Sky Studios.
+
+					We present a procedural block-based approach for USD pipelines
+
+					that minimizes up-front USD knowledge requirements while ensuring 
+					users can still leverage the power of native USD. Building on
+					
+					USD and <a href="https://medium.com/blue-sky-tech-blog/conduit-introduction-5f1134171b7">Conduit</a>, 
+					we define fundamental workflow principles and
+					
+					philosophies on artist-interaction that guide our modular Houdini-
+					based toolsets. Finally, we discuss the successes and challenges in
+					
+					scaling these workflows into production.
+
+					The solution was recently validated against ILM's pipeline, and proven to be
+					functionally pipeline-agnostic and significantly more intuitive.
 					</p>
-					<a href="https://www.wuwayne.com/shallow-water/">Click here to try it out live!</a>
+					<p>
+					Check out the paper here: <a href="/files/blockworkflow.pdf" target="_blank">PDF</a>
+					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<div style="padding:54.58% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/282231204?loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>					<div class="row row-pt-md portfolio-navigation">
+					<img src="/images/blockusd/teaser.jpg" class="img-responsive">
+					<!-- <div class="slide">
+						<div class="smallslide">
+								<h3>Motivations</h3>
+								<ul>
+									<li>Challenging to get the nice look.</li>
+									<li>Multi-material, Heterogeneous setup.</li>
+									<li>Complicated constraint network to manage.</li>
+									<li>Long iteration time.</li>
+									<li>Art-directable fracturing and destruction.</li>
+									<li>SimpleBulle.</li>
+								</ul>
+							</div>
+							<div class="smallslide">
+								<h3>Requirements</h3>
+								<ul>
+									<li>Aesthetic</li>
+									<li>Art Directability</li>
+									<li>Flexibility</li>
+									<li>Functionality</li>
+									<li>Performance</li>
+									<li>Extendability</li>
+								</ul>
+							</div>
+					</div> -->
+
+					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="ik.html" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
+							<a href="#" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="sketchbook.html" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="/work/conduit" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -116,15 +160,15 @@
 	</div>
 	
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<script src="/js/main.js"></script>
 
 	</body>
 </html>

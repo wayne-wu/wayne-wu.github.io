@@ -5,29 +5,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Wayne Wu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/batman.png">
+	<link rel="icon" type="image/png" href="/images/batman.png">
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
+	<script src="/js/respond.min.js"></script>
 	<![endif]-->
 
 	</head>
@@ -45,7 +45,7 @@
 				<ul>
 					<li><a href="/#projects">Work</a></li>
 					<li><a href="/#about">About Me</a></li>
-					<li><a href="files/resume-waynewu.pdf" target="_blank">Resume</a></li>
+					<li><a href="/files/resume-waynewu.pdf" target="_blank">Resume</a></li>
 				</ul>
 			</div>
 			<div class="fh5co-top-social menu-1 text-right">
@@ -63,61 +63,35 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Real-Time Position-Based Crowd Simulation in WebGPU
+					<h2>GPU Path Tracer and Denoiser in CUDA
 					</h2>
 					<P>
-						In thie project, we focus on simulating massive crowd behavior in real-time.
-						Specifically, we came across this <a href="https://arxiv.org/pdf/1802.02673.pdf" target="_blank">paper</a> by Weiss et. al that uses Position-Based Dynamics to simulate large dense crowd at interactive rate.
-						While the paper was originally implemented in CUDA and Unreal Engine, 
-						we decided to use WebGPU for both simulation and rendering as a mean to learn and understand a modern graphics API, 
-						while contributing a unique example to the early WebGPU community.
-						As far as we know, this project is the very first crowd simulation in WebGPU, and one of the first few in web.
+						Global Illumination can be achieved with path tracing. This project implements a GPU path tracer, and subsequently a denoiser.
+						To begin with, the core workings of the path tracer were implemented using CUDA kernels. 
+						Futhermore, glTF was chosen as the 3D format for arbitrary mesh loading, instead of simpler format such as OBJ.
+						In order to support glTF, basic physically-based rendering techniques must be used for the metallic-roughness model which glTF uses,
+						in addition to the ability to load arbitrary textures.
+						Finally, a denoiser based on <a href="https://jo.dreggn.org/home/2010_atrous.pdf">A-Trous algorithm</a> was implemented.
 					</p>
 					<p>
-					<a href="https://www.wuwayne.com/webgpu-crowd-simulation" target="_blank">Check it out live! (WebGPU Required)</a>
-					</p>
-					<p>
-						Or find out more on <a href="https://github.com/wayne-wu/webgpu-crowd-simulation" target="_blank">Github</a>.
+						Find out more on <a href="https://github.com/wayne-wu/Project3-CUDA-Path-Tracer" target="_blank">Github</a>.
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<img src="https://github.com/wayne-wu/webgpu-crowd-simulation/blob/main/img/overview.gif?raw=true" class="img-responsive">
-					<!-- <div class="slide">
-						<div class="smallslide">
-								<h3>Motivations</h3>
-								<ul>
-									<li>Challenging to get the nice look.</li>
-									<li>Multi-material, Heterogeneous setup.</li>
-									<li>Complicated constraint network to manage.</li>
-									<li>Long iteration time.</li>
-									<li>Art-directable fracturing and destruction.</li>
-									<li>SimpleBulle.</li>
-								</ul>
-							</div>
-							<div class="smallslide">
-								<h3>Requirements</h3>
-								<ul>
-									<li>Aesthetic</li>
-									<li>Art Directability</li>
-									<li>Flexibility</li>
-									<li>Functionality</li>
-									<li>Performance</li>
-									<li>Extendability</li>
-								</ul>
-							</div>
-					</div> -->
-
+					<div style="padding:99.26% 0 0 0;position:relative;">
+						<iframe src="https://player.vimeo.com/video/665858874?autoplay=1&loop=1&autopause=0&muted=1&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow=autoplay></iframe>
+					</div><script src="https://player.vimeo.com/api/player.js"></script>
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="#" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
+							<a href="/work/grass" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="grass.html" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="/work/blockusd" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -152,15 +126,15 @@
 	</div>
 	
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<script src="/js/main.js"></script>
 
 	</body>
 </html>

@@ -11,7 +11,7 @@
 *
 * ======================================================= */
 :root {
-  --gold: rgb(148, 124, 16);
+  --gold: #a08c5b;
   --text: #bdbcbc;
 }
 
@@ -75,8 +75,8 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color: #fff;
-  font-family: "Montserrat", Arial, sans-serif;
+  /* color: #fff; */
+  /* font-family: "Montserrat", Arial, sans-serif; */
   font-weight: 400;
   margin: 0 0 20px 0;
 }
@@ -462,6 +462,15 @@ h1, h2, h3, h4, h5, h6, figure {
   .feature-center .icon {
     margin: 0 auto 30px auto;
   }
+}
+
+.bar {
+  font-family:'Times New Roman', Times, serif;
+  color: white;
+}
+
+.bar p{
+  color: var(--gold);
 }
 
 .work {

@@ -6,7 +6,9 @@
 	<title>Wayne Wu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="/images/batman.png">
-
+	<link rel="icon" 
+		type="image/png" 
+		href="/images/batman.png">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 	
@@ -16,10 +18,8 @@
 	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="/css/bootstrap.css">
-
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="/css/style.css">
-
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -63,36 +63,36 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Wiggly: Spacetime Optimization for Animating Deformable Objects
-					</h2>
-					<h3>Wayne Wu, Aditya Abhyankar</h3>
+					<h2>Interactive L-Systems in TouchDesigner</h2>
 					<P>
-						In this project, we implement the paper <a href="https://dl.acm.org/doi/10.1145/2601097.2601156" target="_blank">Animating Deformable Objects Using Sparse Spacetime Constraints</a> by Schulz et al.
-						The main idea of the paper is to use spacetime optimization with "wiggly" splines to generate natural oscillatory motions for deformable objects.
-						We've implemented the paper as a modular Houdini toolkit that provides flexibility to users while maintaining proceduralism.
-						The core algorithm of the paper was implemented in C++ using HDK, while two additional SOP nodes were introduced to facilitate the full workflow.
-						I was specifically responsible for the design and implementation of the full workflow in Houdini.
+					This project implements an interactive plant using L-systems in TouchDesigner. 
+					The L-systems are controlled in real-time using a Leap Motion controller. 
+					Currently, the control is very simple. As the user raises their hand, the plants will grow with it. 
+					As they grab and hold their fist, the flowers will blossom.
+					In order to make the system performant, it is implemented using geometry instancing instead of L-system's default stamping mechanism.
 					</p>
 					<p>
-						Find out more on <a href="https://github.com/wayne-wu/wiggly" target="_blank">Github</a>.
+						Find out more on <a href="https://github.com/wayne-wu/interactive-lsystems" target="_blank">Github</a>.
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<div style="padding:56.25% 0 0 0;position:relative;">
-						<iframe src="https://www.youtube.com/embed/VGXwLy2QH20?start=407&autoplay=1&mute=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-					</div><script src="https://player.vimeo.com/api/player.js"></script>
-
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/761320396?autoplay=1&loop=1&autopause=0&muted=1&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+					<div class="overview">
+						<h3></h3>
+						<p>Here's a video of how the plant is controlled using Leap Motion.</p>
+						<div style="padding:70.00% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/761321365?autoplay=1&loop=1&autopause=0&muted=1&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+					</div>
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="#" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
+							<a href="/work/charactergui" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="/work/crowdsim" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="#" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>

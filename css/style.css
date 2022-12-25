@@ -612,7 +612,8 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .fh5co-heading h3 {
-  font-size: 18px;
+  font-size: 15px;
+  color: var(--gold);
 }
 .fh5co-heading p {
   font-size: 18px;

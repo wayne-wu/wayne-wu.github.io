@@ -65,7 +65,7 @@ a {
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: var(--gold);
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
@@ -341,7 +341,6 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: rgba(0, 0, 0, 0.4);
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -733,7 +732,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-footer {
-  background: #efefef;
+  background: rgba(0,0,0,0.4);
 }
 #fh5co-footer .fh5co-footer-links {
   padding: 0;
@@ -745,7 +744,7 @@ h1, h2, h3, h4, h5, h6, figure {
   list-style: none;
 }
 #fh5co-footer .fh5co-footer-links li a {
-  color: #000;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 #fh5co-footer .fh5co-footer-links li a:hover {

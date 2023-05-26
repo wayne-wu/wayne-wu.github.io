@@ -6,7 +6,9 @@
 	<title>Wayne Wu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="/images/batman.png">
-
+	<link rel="icon" 
+		type="image/png" 
+		href="/images/batman.png">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 	
@@ -16,10 +18,8 @@
 	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="/css/bootstrap.css">
-
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="/css/style.css">
-
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -63,27 +63,22 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Real-Time Grass Simulation and Rendering in Vulkan
-					</h2>
+					<h2>Real-Time Procedural Music Visualizer in WebGL</h2>
 					<P>
-						This is a course project that implements the paper: 
-						<a href="https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf" target="_blank">
-							Responsive Real-Time Grass Rendering for General 3D Scenes (2017)</a>.
-						Using Vulkan, a compute shader is used to apply simple dynamics to the grass curves (e.g. wind and gravity forces),
-						while tesselation shaders are used to generate vertices and patches from the curves for rendering.
-						Culling operations are also implemented to improve the rendering performance of dense grass scene.
-						Overall, it was a very fun project that introduces the Vulkan API and how grass rendering works in real-time applications.
+					This small project implements a neon-themed music visualizer of the song Infinity by Coldplay using noise functions. 
+					There are three spheres that are displaced using fractal brownian motion (FBM) with different amplitudes and frequencies. 
+					All three spheres are rendered with lines for composing visual complexity. 
+					Bloom effect is implemented as post processing for the glow-look.
+					Finally, the audio is loaded using WebAudio API, and the audio spectrum is used to drive the amplitude of the noise.	
 					</p>
 					<p>
-						Find out more on <a href="https://github.com/wayne-wu/Project5-Vulkan-Grass-Rendering" target="_blank">Github</a>.
+					<a href="https://www.wuwayne.com/webgl-music-visualizer/" target="_blank">Check it out live!</a>
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<div style="padding:99.26% 0 0 0;position:relative;">
-						<iframe src="https://player.vimeo.com/video/665416720?autoplay=1&loop=1&autopause=0&muted=1&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow=autoplay></iframe>
-					</div><script src="https://player.vimeo.com/api/player.js"></script>
+					<div style="padding:80% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/829399155?autoplay=1&loop=1&autopause=0&muted=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
 							<a href="/work/infinitycorridor/" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
@@ -92,7 +87,7 @@
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="/work/pathtracer" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="/work/grass/" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>

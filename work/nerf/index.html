@@ -6,7 +6,9 @@
 	<title>Wayne Wu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="/images/batman.png">
-
+	<link rel="icon" 
+		type="image/png" 
+		href="/images/batman.png">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 	
@@ -16,10 +18,8 @@
 	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="/css/bootstrap.css">
-
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="/css/style.css">
-
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -63,36 +63,31 @@
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
-					<h2>Real-Time Grass Simulation and Rendering in Vulkan
-					</h2>
+					<h2>Neural Radiance Field in PyTorch Lightning</h2>
+					<h3>Wayne Wu, Yu-Chia Shen</h3>
 					<P>
-						This is a course project that implements the paper: 
-						<a href="https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf" target="_blank">
-							Responsive Real-Time Grass Rendering for General 3D Scenes (2017)</a>.
-						Using Vulkan, a compute shader is used to apply simple dynamics to the grass curves (e.g. wind and gravity forces),
-						while tesselation shaders are used to generate vertices and patches from the curves for rendering.
-						Culling operations are also implemented to improve the rendering performance of dense grass scene.
-						Overall, it was a very fun project that introduces the Vulkan API and how grass rendering works in real-time applications.
+					View synthesis and 3D scene reconstruction are important topics of computer vision. 
+					This project implements the ground-breaking work of Neural Radiance Field (NeRF) based on <a href="https://arxiv.org/abs/2003.08934">the original paper from 2020</a>.
+					We implement the core NeRF algorithm, including the fully-connected neural network, volume renderer, as well as key features such as frequency-based positional encoding and hierarchical sampling.
+					We use PyTorch Lightning as our framework and allow the neural network to be trained on the GPU with different memory limitations.
 					</p>
 					<p>
-						Find out more on <a href="https://github.com/wayne-wu/Project5-Vulkan-Grass-Rendering" target="_blank">Github</a>.
+					<a href="https://github.com/wayne-wu/nerf-pytorch" target="_blank">Find out more on Github!</a>
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<div style="padding:99.26% 0 0 0;position:relative;">
-						<iframe src="https://player.vimeo.com/video/665416720?autoplay=1&loop=1&autopause=0&muted=1&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow=autoplay></iframe>
-					</div><script src="https://player.vimeo.com/api/player.js"></script>
+					<div style="padding:56.5% 0 0 0;position:relative;"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS3kqvqCj98Vj4BC5itvIw08ab4ollxIO1kKh7-KLZpbzEy3-V7rr1ip9mmP-uY8tCTuvMsWLNruXjK/embed?start=true&loop=false&delayms=3000" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 					<div class="row row-pt-md portfolio-navigation">
 						<div class="col-xs-4 text-left">
-							<a href="/work/nerf/" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
+							<a href="/work/musicviz/" class="btn btn-primary btn-outline"><i class="icon-circle-left"></i> Prev </a>
 						</div>
 						<div class="col-xs-4 text-center">
 							<a href="/#projects" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> All </a>
 						</div>
 						<div class="col-xs-4 text-right">
-							<a href="/work/pathtracer" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
+							<a href="/work/grass/" class="btn btn-primary btn-outline">Next <i class="icon-circle-right"></i></a>
 						</div>
 					</div>
 				</div>

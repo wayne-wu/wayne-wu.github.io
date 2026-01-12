@@ -40,13 +40,13 @@
   content: "\ec67";
   color: #e6b91e;
 }
-.icon-github:hover {
+/* .icon-github:hover {
   color: #800080;
 }
 .icon-github-color:before {
   content: "\eab0";
   color: #800080;
-}
+} */
 .icon-instagram-color:before {
   content: "\ec6d";
   color: #e4405f;
@@ -54,13 +54,13 @@
 .icon-instagram:hover {
   color: #e4405f;
 }
-.icon-linkedin:hover {
+/* .icon-linkedin:hover {
   color: #0077b5;
 }
 .icon-linkedin-color:before {
   content: "\ecb2";
   color: #0077b5;
-}
+} */
 .icon-medium:before {
   content: "\ecd6";
 }

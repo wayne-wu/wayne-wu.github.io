@@ -33,33 +33,11 @@
 	</head>
 	<body>
 		
-	<div class="fh5co-loader"></div>
+	<site-loader></site-loader>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="fh5co-top-logo">
-				<div id="fh5co-logo"><a href="/">Wayne Wu</a></div>
-			</div>
-			<div class="fh5co-top-menu menu-1 text-center">
-				<ul>
-					<li><a href="/#projects">Work</a></li>
-					<li><a href="/#about">About Me</a></li>
-					<li><a href="/files/resume-waynewu.pdf" target="_blank">Resume</a></li>
-				</ul>
-			</div>
-			<div class="fh5co-top-social menu-1 text-right">
-				<ul class="fh5co-social">
-					<li><a href="https://linkedin.com/in/wayne-wu"><i class="icon-linkedin"></i></a></li>
-					<li><a href="https://github.com/wayne-wu"><i class="icon-github"></i></a></li>
-					<li><a href="https://instagram.com/danceformewayne"><i class="icon-instagram"></i></a></li>
-					<li><a href="https://www.imdb.com/name/nm8224986/"><i class="icon-imdb"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
-	<div id="about">
+	<site-nav></site-nav>
+<div id="about">
 		<div class="container">
 			<div class="row top-line animate-box">
 				<div class="col-md-6 col-md-offset-3 col-md-push-2 text-left fh5co-heading">
@@ -149,34 +127,10 @@
 			</div>
 		</div>
 	</div>
-
-	<footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; Wayne Wu</small> 
-					</p>
-					
-					<ul class="fh5co-social-icons">
-						<li><a href="https://linkedin.com/in/wayne-wu"><i class="icon-linkedin"></i></a></li>
-						<li><a href="https://github.com/wayne-wu"><i class="icon-github"></i></a></li>
-						<li><a href="https://instagram.com/danceformewayne"><i class="icon-instagram"></i></a></li>
-						<li><a href="https://www.imdb.com/name/nm8224986/"><i class="icon-imdb"></i></a></li>
-					</ul>
-					
-				</div>
-			</div>
-
-		</div>
-	</footer>
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	
-	<!-- jQuery -->
+	<site-footer></site-footer>
+</div>
+	<site-gototop></site-gototop>
+<!-- jQuery -->
 	<script src="/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="/js/jquery.easing.1.3.js"></script>
@@ -184,6 +138,8 @@
 	<script src="/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
 	<script src="/js/jquery.waypoints.min.js"></script>
+	<!-- Components -->
+	<script src="/js/site-components.js"></script>
 	<!-- Main -->
 	<script src="/js/main.js"></script>
 

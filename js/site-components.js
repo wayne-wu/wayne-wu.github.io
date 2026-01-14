@@ -146,4 +146,71 @@
   if (!customElements.get('site-gototop')) {
     customElements.define('site-gototop', SiteGoToTop);
   }
+
+  const normalizePath = (path) => {
+    let normalized = path.split('#')[0].split('?')[0];
+    if (normalized.endsWith('/index.html')) {
+      normalized = normalized.slice(0, -'/index.html'.length);
+    }
+    if (normalized.length > 1 && normalized.endsWith('/')) {
+      normalized = normalized.slice(0, -1);
+    }
+    return normalized;
+  };
+
+  const findNavLink = (navRoot, keyword) => {
+    const loweredKeyword = keyword.toLowerCase();
+    const links = Array.from(navRoot.querySelectorAll('a'));
+    return links.find((link) => link.textContent.toLowerCase().includes(loweredKeyword));
+  };
+
+  const applyNavLink = (link, href) => {
+    if (!link) return;
+    if (!href) {
+      link.removeAttribute('href');
+      link.setAttribute('aria-disabled', 'true');
+      link.style.visibility = 'hidden';
+      return;
+    }
+    link.setAttribute('href', href);
+    link.removeAttribute('aria-disabled');
+    link.style.removeProperty('visibility');
+  };
+
+  const updatePortfolioNavigation = async () => {
+    const navRoot = document.querySelector('.portfolio-navigation');
+    if (!navRoot) return;
+
+    try {
+      const response = await fetch('/index.html', { credentials: 'same-origin' });
+      if (!response.ok) return;
+      const html = await response.text();
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const items = Array.from(doc.querySelectorAll('#projects a.work'))
+        .map((anchor) => anchor.getAttribute('href'))
+        .filter(Boolean)
+        .map((href) => ({
+          href,
+          normalized: normalizePath(new URL(href, window.location.origin).pathname),
+        }));
+
+      const current = normalizePath(window.location.pathname);
+      const currentIndex = items.findIndex((item) => item.normalized === current);
+      if (currentIndex === -1) return;
+
+      const prev = currentIndex > 0 ? items[currentIndex - 1].href : null;
+      const next = currentIndex < items.length - 1 ? items[currentIndex + 1].href : null;
+
+      applyNavLink(findNavLink(navRoot, 'prev'), prev);
+      applyNavLink(findNavLink(navRoot, 'next'), next);
+    } catch (error) {
+      return;
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePortfolioNavigation);
+  } else {
+    updatePortfolioNavigation();
+  }
 })();

@@ -1272,6 +1272,7 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 100%;
   z-index: 9999;
   background: url(../images/loader.gif) center no-repeat #000;
+  background-size: 72px 72px;
 }
 
 .js .animate-box {

@@ -10,7 +10,7 @@
       <ul>
         <li><a href="/#projects">Work</a></li>
         <li><a href="/#about">About Me</a></li>
-        <li><a href="https://www.dropbox.com/scl/fi/gof9m0a97uhtllpurtwbh/resume-waynewu.pdf?rlkey=31eu4xdklz70laxfmr17s8n63&st=8t9fepue&raw=1" target="_blank">Resume</a></li>
+        <li><a href="/files/resume-waynewu.pdf" target="_blank">Resume</a></li>
       </ul>
     </div>
     <div class="fh5co-top-social menu-1 text-right">

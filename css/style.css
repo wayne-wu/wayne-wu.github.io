@@ -29,6 +29,76 @@ body {
   background: #000;
 }
 
+.project-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 520px;
+  padding: 120px 0 100px;
+  overflow: hidden;
+  background: #111;
+}
+
+.project-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.project-hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-hero-media iframe,
+.project-hero-media video,
+.project-hero-media img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  height: 56.25vw;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.project-hero .container,
+.project-hero .row,
+.project-hero .fh5co-heading {
+  position: relative;
+  z-index: 2;
+}
+
+.project-hero .fh5co-heading p {
+  color: #fff;
+}
+
+
+.project-hero .fh5co-heading a {
+  text-decoration: underline;
+}
+
+.project-hero .fh5co-heading a:hover,
+.project-hero .fh5co-heading a:focus {
+  color: #fff;
+  opacity: 0.85;
+}
+
+.project-content {
+  padding-top: 50px;
+}
+
+.project-hero-source {
+  display: none !important;
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -106,6 +176,11 @@ h1, h2, h3, h4, h5, h6, figure {
   background: rgba(0, 0, 0, 0.7);
 }
 @media screen and (max-width: 768px) {
+  .project-hero {
+    min-height: 460px;
+    padding: 100px 0 80px;
+  }
+
   .fh5co-nav {
     padding: 20px 0;
   }

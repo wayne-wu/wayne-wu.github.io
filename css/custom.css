@@ -73,7 +73,7 @@ span.blue { color: #34a5ea}
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #888;
+    color: #bbbbbb;
     text-align: center;
 }
 
@@ -84,31 +84,40 @@ span.blue { color: #34a5ea}
     margin-left: auto;
     margin-right: auto;
     padding: 8px 12px;
-    border: 1px solid #d9d9d968;
+    border: 1px solid #bbbbbb;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #a08c5b;
+    background: rgb(0, 0, 0);
+    color: var(--gold);
     font-size: 13px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.project-search-input::placeholder {
+    color: #bbbbbb;
+    opacity: 1;
+}
+
 .project-search-input:focus {
     outline: none;
-    border-color: #a08c5b;
+    border-color: var(--gold);
     box-shadow: 0 0 0 3px rgba(160, 140, 91, 0.12);
+}
+
+.project-search-input:hover {
+    border-color: var(--gold);
 }
 
 .project-search-summary {
     min-height: 24px;
     margin: 8px 0 0;
-    color: #888;
+    color: #bbbbbb;
     font-size: 10px;
     text-align: center;
 }
 
 .project-search-empty {
     margin-top: 10px;
-    color: #888;
+    color: #bbbbbb;
 }
 
 

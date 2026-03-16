@@ -179,6 +179,194 @@
 		});
 	};
 
+	var escapeHtml = function(value) {
+		return String(value)
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	};
+
+	var normalizeSearchText = function(value) {
+		return String(value || '')
+			.toLowerCase()
+			.replace(/[^a-z0-9+#]+/g, ' ')
+			.trim();
+	};
+
+	var normalizeTagId = function(value) {
+		return String(value || '')
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, '-')
+			.replace(/^-+|-+$/g, '');
+	};
+
+	var buildSearchIndex = function(project) {
+		var tags = Array.isArray(project.tags) ? project.tags : [];
+		var freeText = [
+			project.title || '',
+			project.summary || '',
+			Array.isArray(project.search) ? project.search.join(' ') : ''
+		].join(' ');
+
+		var textTokens = normalizeSearchText(freeText).split(/\s+/).filter(Boolean);
+		var tagIds = [];
+		for (var i = 0; i < tags.length; i++) {
+			var rawTag = tags[i];
+			var tagId = normalizeTagId(rawTag);
+			if (tagId) {
+				tagIds.push(tagId);
+				tagIds.push(tagId.replace(/-/g, ''));
+			}
+			var splitTagTokens = normalizeSearchText(rawTag).split(/\s+/).filter(Boolean);
+			for (var j = 0; j < splitTagTokens.length; j++) {
+				tagIds.push(splitTagTokens[j]);
+			}
+		}
+
+		return {
+			text: textTokens,
+			tags: tagIds
+		};
+	};
+
+	var lazyLoadProjectImages = function() {
+		var grids = document.querySelectorAll('.work-grid[data-image]');
+		if (!grids.length) {
+			return;
+		}
+
+		var loadGridImage = function(node) {
+			if (!node || !node.getAttribute('data-image')) {
+				return;
+			}
+
+			node.style.backgroundImage = 'url(' + node.getAttribute('data-image') + ')';
+			node.removeAttribute('data-image');
+			node.classList.add('project-image-loaded');
+		};
+
+		if (!('IntersectionObserver' in window)) {
+			for (var i = 0; i < grids.length; i++) {
+				loadGridImage(grids[i]);
+			}
+			return;
+		}
+
+		var observer = new IntersectionObserver(function(entries, activeObserver) {
+			for (var j = 0; j < entries.length; j++) {
+				if (!entries[j].isIntersecting) {
+					continue;
+				}
+
+				loadGridImage(entries[j].target);
+				activeObserver.unobserve(entries[j].target);
+			}
+		}, {
+			rootMargin: '300px 0px'
+		});
+
+		for (var k = 0; k < grids.length; k++) {
+			observer.observe(grids[k]);
+		}
+	};
+
+	var renderProjects = function(projectsToRender) {
+		var grid = document.getElementById('project-grid');
+		var projects = Array.isArray(projectsToRender) ? projectsToRender : window.PROJECTS;
+		if (!grid || !Array.isArray(projects)) {
+			return;
+		}
+
+		var html = [];
+		for (var i = 0; i < projects.length; i++) {
+			var project = projects[i];
+			var tags = Array.isArray(project.tags) ? project.tags : [];
+			var searchIndex = buildSearchIndex(project);
+
+			html.push(
+				'<div class="col-md-4 text-center animate-box project-card" data-search="' + escapeHtml(searchIndex.text.join(' ')) + '" data-tags="' + escapeHtml(searchIndex.tags.join(' ')) + '">' +
+					'<a class="work" href="' + escapeHtml(project.href) + '">' +
+						'<div class="work-grid" data-image="' + escapeHtml(project.image) + '">' +
+							'<div class="inner">' +
+								'<div class="desc">' +
+									'<h3>' + escapeHtml(project.title) + '</h3>' +
+									'<span class="cat">' + escapeHtml(tags.map(function(tag) { return '#' + tag; }).join(' ')) + '</span>' +
+								'</div>' +
+							'</div>' +
+						'</div>' +
+					'</a>' +
+				'</div>'
+			);
+		}
+
+		grid.innerHTML = html.join('');
+		lazyLoadProjectImages();
+		contentWayPoint();
+	};
+
+	var projectMatchesQuery = function(project, queryTerms) {
+		if (!queryTerms.length) {
+			return true;
+		}
+
+		var searchIndex = buildSearchIndex(project);
+		var haystack = searchIndex.text.join(' ');
+		var tagIndex = searchIndex.tags.join(' ');
+
+		for (var i = 0; i < queryTerms.length; i++) {
+			var term = queryTerms[i];
+			var termMatchesText = haystack.indexOf(term) !== -1;
+			var normalizedTagTerm = normalizeTagId(term);
+			var termMatchesTag = tagIndex.indexOf(term) !== -1 ||
+				tagIndex.indexOf(normalizedTagTerm) !== -1 ||
+				tagIndex.indexOf(normalizedTagTerm.replace(/-/g, '')) !== -1;
+
+			if (!termMatchesText && !termMatchesTag) {
+				return false;
+			}
+		}
+
+		return true;
+	};
+
+	var setupProjectSearch = function() {
+		var input = document.getElementById('project-search');
+		var summary = document.getElementById('project-search-summary');
+		var emptyState = document.getElementById('project-search-empty');
+		var projects = Array.isArray(window.PROJECTS) ? window.PROJECTS : [];
+		if (!input || !summary || !emptyState) {
+			return;
+		}
+
+		var total = projects.length;
+		var updateResults = function() {
+			var query = normalizeSearchText(input.value);
+			var terms = query ? query.split(/\s+/) : [];
+			var matches = [];
+
+			for (var i = 0; i < projects.length; i++) {
+				if (projectMatchesQuery(projects[i], terms)) {
+					matches.push(projects[i]);
+				}
+			}
+
+			renderProjects(matches);
+
+			if (query) {
+				summary.textContent = matches.length + ' of ' + total + ' projects match "' + input.value.trim() + '".';
+			} else {
+				summary.textContent = 'Showing all ' + total + ' projects.';
+			}
+
+			emptyState.hidden = matches.length !== 0;
+		};
+
+		input.addEventListener('input', updateResults);
+		updateResults();
+	};
+
 	var isVideoIframe = function(node) {
 		if (!node || node.tagName !== 'IFRAME') {
 			return false;
@@ -463,6 +651,7 @@
 		dropdown();
 		goToTop();
 		loaderPage();
+		setupProjectSearch();
 		normalizeEmbeddedMedia();
 		projectHero();
 	});

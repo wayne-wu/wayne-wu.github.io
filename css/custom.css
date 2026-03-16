@@ -60,6 +60,57 @@ span.blue { color: #34a5ea}
     max-width: 70%;
 }
 
+.project-search-row {
+    margin-bottom: 10px;
+    padding-top: 0;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.project-search-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    text-align: right;
+}
+
+.project-search-input {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    padding: 8px 12px;
+    border: 2px solid #d9d9d9;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.80);
+    color: #111;
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-search-input:focus {
+    outline: none;
+    border-color: #a08c5b;
+    box-shadow: 0 0 0 3px rgba(160, 140, 91, 0.12);
+}
+
+.project-search-summary {
+    min-height: 24px;
+    margin: 8px 0 0;
+    color: #888;
+    font-size: 9px;
+    text-align: right;
+}
+
+.project-search-empty {
+    margin-top: 10px;
+    color: #888;
+}
+
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {

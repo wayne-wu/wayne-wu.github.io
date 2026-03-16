@@ -177,17 +177,46 @@
     link.style.removeProperty('visibility');
   };
 
+  let projectsDataPromise = null;
+  const loadProjectsData = () => {
+    if (Array.isArray(window.PROJECTS)) {
+      return Promise.resolve(window.PROJECTS);
+    }
+
+    if (projectsDataPromise) {
+      return projectsDataPromise;
+    }
+
+    projectsDataPromise = new Promise((resolve, reject) => {
+      const existingScript = document.querySelector('script[data-projects-script="true"]');
+      if (existingScript) {
+        existingScript.addEventListener('load', () => resolve(window.PROJECTS || []), { once: true });
+        existingScript.addEventListener('error', reject, { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = '/js/projects.js';
+      script.async = true;
+      script.dataset.projectsScript = 'true';
+      script.onload = () => resolve(window.PROJECTS || []);
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+
+    return projectsDataPromise;
+  };
+
   const updatePortfolioNavigation = async () => {
     const navRoot = document.querySelector('.portfolio-navigation');
     if (!navRoot) return;
 
     try {
-      const response = await fetch('/index.html', { credentials: 'same-origin' });
-      if (!response.ok) return;
-      const html = await response.text();
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      const items = Array.from(doc.querySelectorAll('#projects a.work'))
-        .map((anchor) => anchor.getAttribute('href'))
+      const projects = await loadProjectsData();
+      if (!Array.isArray(projects) || !projects.length) return;
+
+      const items = projects
+        .map((project) => project && project.href)
         .filter(Boolean)
         .map((href) => ({
           href,
